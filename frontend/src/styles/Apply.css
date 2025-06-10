@@ -1,0 +1,98 @@
+.application-container h1 {
+    text-align: center;
+    color: darkslategray;
+}
+
+.application-container form {
+    margin: 2rem 6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.application-row {
+    display: flex;
+    gap: 2rem;
+}
+
+.application-row div {
+    width: 100%;
+}
+
+.application-container form input {
+    border: 2px solid #8B54FF;
+    border-radius: 17px;
+    height: 3rem;
+    display: block;
+    width: 100%;
+    font-size: large;
+    padding: 1rem;
+    color: #000000c7;
+}
+
+.application-container form input:focus-visible {
+    border-color: #a6b5fd;
+    outline: none
+}
+
+.application-container form label {
+    color: #565656;
+    font-size: larger;
+    padding-left: .2rem;
+    display: block;
+    width: 100%;
+    margin: 1rem 0rem .5rem 0rem;
+}
+
+.application-container form input[type="file"] {
+    padding: 0.7rem 1.5rem;
+    font-size: medium;
+    color: gray;
+}
+
+.application-container form input::file-selector-button {
+    background-color: white;
+    border: none;
+    color: rgb(73, 73, 73)
+}
+
+.application-container button {
+    width: 8rem;
+    margin: 3rem auto;
+    padding: 10px 24px;
+    font-size: 18px;
+    color: rgb(119 82 195);
+    border: 2px solid #8B54FF;
+    border-radius: 34px;
+    background-color: transparent;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+}
+
+
+.application-container button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: #8B54FF;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.application-container button:hover::before {
+    scale: 3;
+}
+
+.application-container button:hover {
+    color: white;
+    scale: 1.1;
+    box-shadow: 0px 0px 13px 10px rgba(191, 118, 240, 0.4);
+}
+
+.application-container button:active {
+    scale: 1;
+}

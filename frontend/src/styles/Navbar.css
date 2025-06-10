@@ -1,7 +1,7 @@
 nav ul {
     display: flex;
     justify-content: center;
-    padding: 0;
+    margin: 1rem auto 3rem auto;
 }
 
 nav ul li {
