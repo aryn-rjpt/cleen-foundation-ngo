@@ -1,0 +1,66 @@
+
+
+/* Add to About.css or keep in a separate AboutLayout.css if needed */
+
+.about-layout {
+ 
+  margin: 40px auto;
+  padding: 20px 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.about-layout h1 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #fe424d;
+}
+
+.about-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.about-nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  border: 2px solid transparent;
+}
+
+.about-nav a:hover {
+  background-color: #fe424d;
+  color: #fff;
+  border-color: #fe424d;
+}
+
+.about-nav a.active {
+  background-color: #fe424d;
+  color: white;
+  border-color: #fe424d;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-top: 2px solid #eee;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
