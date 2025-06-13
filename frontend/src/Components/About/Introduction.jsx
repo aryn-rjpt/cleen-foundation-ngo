@@ -2,13 +2,13 @@ import React from "react";
 import "../../styles/Introduction.css";  // ✅ correct
 import "../../styles/About.css";         // ✅ correct
 
-import introImg from "../assets/tempLogo.png";
-import missionImg from "../assets/mission.png";
-import workImg from "../assets/work.jpg";
-import volunteerImg from "../assets/volunteer.jpg";
-import sdg1 from "../assets/sdg1.png";
-import sdg2 from "../assets/sdg2.png";
-import sdg3 from "../assets/sdg3.png";
+import introImg from "../../assets/tempLogo.png";
+import missionImg from "../../assets/mission.png";
+import workImg from "../../assets/work.jpg";
+import volunteerImg from "../../assets/volunteer.jpg";
+import sdg1 from "../../assets/sdg1.png";
+import sdg2 from "../../assets/sdg2.png";
+import sdg3 from "../../assets/sdg3.png";
 
 
 

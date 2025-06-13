@@ -1,6 +1,6 @@
 .application-container h1 {
     text-align: center;
-    color: darkslategray;
+    color: var(--text-color);
 }
 
 .application-container form {
@@ -27,6 +27,7 @@
     font-size: large;
     padding: 1rem;
     color: #000000c7;
+    background-color: transparent;
 }
 
 .application-container form input:focus-visible {

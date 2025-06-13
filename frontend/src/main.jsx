@@ -4,8 +4,6 @@ import { createRoot } from 'react-dom/client';
 import './index.css';
 
 import App from './App.jsx';
-
-import Admin from './components/Admin.jsx';
 import Apply from './Components/Apply.jsx';
 import Blog from './components/Blog.jsx';
 import Chatbot from './components/Chatbot.jsx';
@@ -24,6 +22,10 @@ import Founder from './Components/About/Founder.jsx';
 import Team from './Components/About/Team.jsx';
 import Gallery from './Components/About/Gallery.jsx';
 import Partners from './Components/About/Partners.jsx';
+
+// Admin Dashboard
+import Admin from './components/Admin.jsx';
+import { Reports, Employees, Blogs, Notify } from './components/Admin.jsx';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
@@ -46,7 +48,16 @@ const router = createBrowserRouter([
           { path: 'partners', element: <Partners /> }
         ]
       },
-      { path: 'admin', element: <Admin /> },
+      { 
+        path: 'admin',
+        element: <Admin />, 
+        children: [
+          { path: 'employees', element: <Employees />},
+          { path: 'reports', element: <Reports />},
+          { path: 'blogs', element: <Blogs />},
+          { path: 'notify', element: <Notify />},
+        ]
+      },
       { path: 'apply', element: <Apply /> },
       { path: 'blog', element: <Blog /> },
       { path: 'chatbot', element: <Chatbot /> },

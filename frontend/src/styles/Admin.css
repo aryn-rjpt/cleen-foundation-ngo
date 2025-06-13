@@ -1,0 +1,43 @@
+.admin-layout { 
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);    
+    background-color: var(--primary-color);
+}
+
+.admin-layout h1 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 25px;
+  color: var(--text-color);
+}
+
+.admin-layout nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.admin-layout nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  border: 2px solid transparent;
+}
+
+.admin-layout nav a:hover {
+  background-color: var(--secondary-color);
+}
+
+.admin-layout nav a.active {
+  background-color: var(--secondary-color);  
+}
+
+.admin-layout>div{
+  background-color: transparent;
+}

@@ -13,24 +13,6 @@
   --shadow-medium: rgba(0, 0, 0, 0.15);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  color: var(--text-dark);
-  background-color: var(--bg-white);
-  line-height: 1.7;
-  font-size: 16px;
-}
-
 /* ==================== HERO SECTION ==================== */
 .hero {
   background: linear-gradient(135deg, var(--green-dark), var(--green-mid));

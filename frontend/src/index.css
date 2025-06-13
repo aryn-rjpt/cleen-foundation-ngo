@@ -2,4 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    --text-color: #607a54;
+    --primary-color: #CAE8BD;
+    --secondary-color: #B0DB9C;
+    --background-color: #ECFAE5;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-dark);
+  background-color: var(--background-color);
+  line-height: 1.7;
+  font-size: 16px;
+}
+

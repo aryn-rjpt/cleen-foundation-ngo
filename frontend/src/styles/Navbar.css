@@ -11,6 +11,7 @@ nav ul li {
 
 nav img{
     width: 7vw;
+    margin-top: -1.2rem;    
 }
 
 nav ul li a {
@@ -18,8 +19,9 @@ nav ul li a {
     padding: 0.7rem 1rem;
     text-decoration: none;
     border-radius: 9px;
+    transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #edcbed;
+    background-color: var(--secondary-color);
 }

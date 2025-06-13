@@ -2,8 +2,7 @@
 
 /* Add to About.css or keep in a separate AboutLayout.css if needed */
 
-.about-layout {
- 
+.about-layout { 
   margin: 40px auto;
   padding: 20px 30px;
   background-color: #ffffff;
@@ -57,10 +56,4 @@ hr {
   border-top: 2px solid #eee;
 }
 
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
