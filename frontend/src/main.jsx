@@ -11,8 +11,10 @@ import Contact from './components/Contact.jsx';
 import Donation from './components/Donation.jsx';
 import Employee from './components/Employee.jsx';
 import Home from './components/Home.jsx';
-import Login from './components/Login.jsx';
 import Error from './components/Error.jsx';
+import Login from './Components/Login.jsx';
+import Register from './Components/Register.jsx';
+
 
 // ✅ AboutLayout with subroutes
 import AboutLayout from './Components/AboutLayout.jsx';
@@ -64,7 +66,8 @@ const router = createBrowserRouter([
       { path: 'contact', element: <Contact /> },
       { path: 'donation', element: <Donation /> },
       { path: 'employee', element: <Employee /> },
-      { path: 'login', element: <Login /> }
+      { path: 'login', element: <Login /> },
+      { path: 'register', element: <Register /> } 
     ]
   }
 ]);
