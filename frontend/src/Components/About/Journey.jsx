@@ -1,5 +1,5 @@
 import React from "react";
-import journeyImg from "../../assets/journey.jpg"; // Replace with actual path
+import journeyImg from "../../assets/journey.jpg"; 
 
 const Journey = () => {
   return (
