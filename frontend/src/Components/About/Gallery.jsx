@@ -3,8 +3,8 @@ import React from 'react';
 const Gallery = () => {
   return (
     <div>
-      <h2>Founder</h2>
-      <p>Details about the founder go here...</p>
+      <h2>Gallery</h2>
+      <p>Details about the Gallery go here...</p>
     </div>
   );
 };

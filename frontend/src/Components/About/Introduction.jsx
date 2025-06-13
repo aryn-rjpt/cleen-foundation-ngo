@@ -1,91 +1,107 @@
 import React from "react";
-import "../../styles/Introduction.css";  // ✅ correct
-import "../../styles/About.css";         // ✅ correct
+import "../../styles/Introduction.css";
+import "../../styles/About.css";
 
 import introImg from "../../assets/tempLogo.png";
 import missionImg from "../../assets/mission.png";
 import workImg from "../../assets/work.jpg";
 import volunteerImg from "../../assets/volunteer.jpg";
+import journeyImg from "../../assets/journey.jpg"; // ✅ Add journey image
 import sdg1 from "../../assets/sdg1.png";
 import sdg2 from "../../assets/sdg2.png";
 import sdg3 from "../../assets/sdg3.png";
 
-
-
 export default function Introduction() {
   return (
     <div className="introduction">
-
       {/* Hero Banner */}
       <section className="hero">
         <div className="hero-content">
           <h1>Clean Foundation</h1>
-          <p>Empowering communities through sustainable development and social change.</p>
+          <p>
+            Transforming lives through sustainable solutions and community
+            empowerment.
+          </p>
         </div>
       </section>
 
       {/* About Us */}
       <section className="about-us">
         <div className="content">
+          <div className="image">
+            <img src={introImg} alt="About Clean Foundation" />
+          </div>
           <div className="text">
             <h2>Who We Are</h2>
             <p>
-              Clean Foundation is a community-driven NGO focused on environmental sustainability,
-              education, gender equality, and social welfare. We work at the grassroots level
-              to bring positive and measurable change to underprivileged communities.
+              Clean Foundation is a community-powered NGO working to promote
+              environmental sustainability, social equity, and educational
+              access. We partner with grassroots organizations to deliver
+              real-world solutions to today’s most urgent challenges.
             </p>
             <p>
-              Since our inception in 2021, we have collaborated with schools, self-help groups,
-              local authorities, and government institutions to promote education, clean water, waste
-              management, and gender empowerment initiatives.
+              Established in 2021, we’ve reached thousands across rural India,
+              promoting green living, clean water access, and empowering women
+              through skill-building programs and awareness campaigns.
             </p>
-          </div>
-          <div className="image">
-            <img src={introImg} alt="About Clean Foundation" />
           </div>
         </div>
       </section>
 
+      
+
       {/* Our Mission */}
       <section className="mission">
         <div className="content">
-          <div className="image">
-            <img src={missionImg} alt="Our Mission" />
-          </div>
           <div className="text">
             <h2>Our Mission</h2>
             <p>
-              Our mission is to transform society by empowering communities through education,
-              health, and sustainable living practices. We aim to instill awareness among youth,
-              women, and rural populations to take action towards a cleaner, greener future.
+              Our mission is to build a sustainable future by educating,
+              empowering, and enabling communities to become self-reliant and
+              eco-conscious. We focus on long-term impact, fostering change
+              from within.
             </p>
             <ul>
-              <li>Spread awareness on health, hygiene, and environment.</li>
-              <li>Promote gender equality and women-led initiatives.</li>
-              <li>Build community capacity through workshops and training.</li>
+              <li>Championing health, hygiene & waste reduction initiatives</li>
+              <li>Empowering women through inclusive leadership programs</li>
+              <li>
+                Partnering with institutions to drive grassroots transformation
+              </li>
             </ul>
+          </div>
+          <div className="image">
+            <img src={missionImg} alt="Our Mission" />
           </div>
         </div>
       </section>
 
       {/* What We Do */}
       <section className="what-we-do">
-        <h2>What We Do</h2>
+        <h2>Our Work in Action</h2>
         <div className="content-grid">
           <div className="card">
             <img src={workImg} alt="Workshop" />
-            <h3>Community Workshops</h3>
-            <p>We conduct awareness sessions on plastic ban, menstrual hygiene, and proper sanitation practices in schools and local communities.</p>
+            <h3>Awareness Workshops</h3>
+            <p>
+              Conducting interactive sessions in schools and local communities
+              on plastic bans, menstrual hygiene, and digital literacy.
+            </p>
           </div>
           <div className="card">
             <img src={workImg} alt="Training" />
-            <h3>Skill Training</h3>
-            <p>Providing self-help groups and rural women access to skill-building programs to foster financial independence.</p>
+            <h3>Skill Development</h3>
+            <p>
+              Providing hands-on vocational training and startup support to
+              underrepresented groups.
+            </p>
           </div>
           <div className="card">
             <img src={workImg} alt="Campaign" />
-            <h3>Environmental Campaigns</h3>
-            <p>Tree plantation drives, cleanliness campaigns, and door-to-door outreach for sustainable lifestyle practices.</p>
+            <h3>Cleanliness Drives</h3>
+            <p>
+              Leading sustainable practices campaigns: tree plantations,
+              zero-waste drives, and door-to-door outreach.
+            </p>
           </div>
         </div>
       </section>
@@ -93,55 +109,55 @@ export default function Introduction() {
       {/* Volunteer Section */}
       <section className="volunteer">
         <div className="content">
-          <div className="text">
-            <h2>Voices of Volunteers</h2>
-            <p>
-              Our volunteers are the backbone of our success. With passion and dedication, they
-              support every mission and drive every initiative. Hear what our volunteers say:
-            </p>
-            <blockquote>
-              “Joining Clean Foundation changed my life. I got the opportunity to educate young
-              girls in my village and help them dream big.”
-              <br /> <span>- Aarti, Volunteer</span>
-            </blockquote>
-            <blockquote>
-              “We worked on a plastic-free market campaign and saw real results. I’m proud to
-              be a changemaker.”
-              <br /> <span>- Rohit, Field Worker</span>
-            </blockquote>
-          </div>
           <div className="image">
             <img src={volunteerImg} alt="Volunteer" />
+          </div>
+          <div className="text">
+            <h2>Voices of Change</h2>
+            <p>
+              We believe in the power of people. Here’s what our changemakers
+              have to say:
+            </p>
+            <blockquote>
+              “Volunteering here gave me a purpose. I now mentor girls from my
+              village and help them stay in school.” <br />
+              <span>- Ankita, Mentor</span>
+            </blockquote>
+            <blockquote>
+              “Together we transformed a neighborhood through our cleanliness
+              campaign. It felt like real change.” <br />
+              <span>- Shivam, Volunteer Leader</span>
+            </blockquote>
           </div>
         </div>
       </section>
 
       {/* Our Impact */}
       <section className="impact">
-        <h2>Our Impact</h2>
+        <h2>By the Numbers</h2>
         <div className="stats">
           <div className="stat">
-            <h3>100+</h3>
-            <p>Community Workshops</p>
+            <h3>150+</h3>
+            <p>Community Programs Conducted</p>
           </div>
           <div className="stat">
-            <h3>5000+</h3>
-            <p>People Reached</p>
+            <h3>8000+</h3>
+            <p>Lives Impacted</p>
           </div>
           <div className="stat">
-            <h3>120+</h3>
-            <p>Women Empowered</p>
+            <h3>200+</h3>
+            <p>Women Entrepreneurs Empowered</p>
           </div>
         </div>
       </section>
 
       {/* SDG Goals */}
       <section className="sdgs">
-        <h2>Supporting UN SDG Goals</h2>
+        <h2>Supporting the Global Goals</h2>
         <div className="sdg-grid">
           <div className="sdg-item">
             <img src={sdg1} alt="SDG 3" />
-            <p>Good Health and Well-being</p>
+            <p>Good Health & Well-being</p>
           </div>
           <div className="sdg-item">
             <img src={sdg2} alt="SDG 5" />
@@ -157,14 +173,16 @@ export default function Introduction() {
       {/* Final Section – Booklet */}
       <section className="booklet">
         <div className="content">
-          <h2>Download Our Booklet</h2>
-          <p>Get detailed information about our initiatives and achievements. Read how Clean Foundation is making an impact in society.</p>
+          <h2>Explore Our Journey</h2>
+          <p>
+            Dive into our detailed report showcasing how Clean Foundation is
+            shaping a sustainable and inclusive tomorrow.
+          </p>
           <a className="download-btn" href="#" download>
-            📘 Download PDF
+            📘 Download Our Booklet
           </a>
         </div>
       </section>
-
     </div>
   );
 }
