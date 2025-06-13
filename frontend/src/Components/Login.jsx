@@ -1,9 +1,31 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
+
+import '../styles/login.css'
 
 const Login = () => {
-  return (
-    <div>Login</div>
-  )
-}
+  const navigate = useNavigate();
 
-export default Login
+  const handleLogin = (e) => {
+    e.preventDefault();
+    alert('Login successful (mock)');
+  };
+
+  return (
+    <div className="login-container">
+      <form className="login-box" onSubmit={handleLogin}>
+        <h2>Welcome Back!</h2>
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+        <p className="register-link">
+        Not registered?{' '}
+        <span onClick={() => navigate('/register')}>Register Now</span>
+        </p>
+
+      </form>
+    </div>
+  );
+};
+
+export default Login;
