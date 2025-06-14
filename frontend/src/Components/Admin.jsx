@@ -6,7 +6,7 @@ import '../styles/Admin.css'
 export const Employees = () => {
   return (
     <div className="employee-container">
-      <h3>New Applications*</h3>
+      <h3>New Applications* ( Showing 2 of 10 ) </h3>
 
       <table>
         <thead>
@@ -33,7 +33,9 @@ export const Employees = () => {
         </tbody>
       </table>
 
-      <h3 style={{marginTop:"3rem"}}>Employees</h3>
+      <button>View All</button>
+
+      <h3 style={{ marginTop: "3rem" }}>Employees</h3>
       <table>
         <thead>
           <tr>
@@ -72,19 +74,23 @@ export const Employees = () => {
           </tr>
         </tbody>
       </table>
+
+      <button>View All</button>
+
     </div>
   )
 }
 
 export const Reports = () => {
   return (
-    <div>Reports</div>
+    <h1 style={{textAlign: "center"}}>Reports Coming Soon</h1>
   )
 }
 
 export const Blogs = () => {
   return (
     <div className="blogs-container">
+
       <button>Add New</button>
 
       <table>
@@ -130,14 +136,31 @@ export const Blogs = () => {
 
       </table>
 
-      
+
     </div>
   )
 }
 
 export const Notify = () => {
   return (
-    <div>Notify</div>
+    <div className="notify-container">
+
+      <form action="">
+
+        <label htmlFor="title">Title*</label>
+        <input type="text" id="title" name="title" required />
+
+        <label htmlFor="desc">Description*</label>
+        <textarea id="desc" name="desc" rows="4" required></textarea>
+
+        <label htmlFor="attach-img">Upload Image</label>
+        <input type="file" id="attach-img" name="attach-img" />
+
+        <button type="submit">Publish</button>
+
+
+      </form>
+    </div>
   )
 }
 

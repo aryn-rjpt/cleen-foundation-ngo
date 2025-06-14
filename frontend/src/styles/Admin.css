@@ -102,3 +102,105 @@ table button:active {
   scale: 1;
 }
 
+.blogs-container>button,
+.notify-container button,
+.employee-container>button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.7rem;
+  background-color: cornsilk;
+  cursor: pointer;
+  border: 1px solid;
+  margin: 1rem auto;
+  display: block;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  overflow: hidden;
+}
+
+
+
+.blogs-container>button::before,
+.notify-container button::before,
+.employee-container>button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color: rgb(255, 182, 182);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.blogs-container>button:hover::before,
+.notify-container button:hover::before,
+.employee-container>button:hover::before {
+  scale: 3;
+}
+
+.blogs-container>button:hover,
+.notify-container button:hover,
+.employee-container>button:hover {
+  scale: 1.1;
+  box-shadow: 0px 0px 13px 5px rgba(90, 83, 83, 0.4);
+}
+
+.blogs-container>button:active,
+.notify-container button:active,
+.employee-container>button:active {
+  scale: 1;
+}
+
+
+.notify-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+
+.notify-container form input, .notify-container form textarea  {
+    border: 2px solid var(--secondary-color);
+    border-radius: 17px;
+    height: 3rem;
+    display: block;
+    width: 100%;
+    font-size: large;
+    padding: 1rem;
+    color: #000000c7;
+    background-color: var(--background-color);
+}
+
+.notify-container form textarea{
+  height: 5rem;
+}
+
+.notify-container form input:focus-visible, .notify-container form textarea:focus-visible {
+    border-color: var(--text-color);
+    outline: none
+}
+
+.notify-container form label {
+    color: #565656;
+    font-size: larger;
+    padding-left: .2rem;
+    display: block;
+    width: 100%;
+    margin: 1rem 0rem .5rem 0rem;
+}
+
+.notify-container form input[type="file"] {
+    padding: 0.7rem 1.5rem;
+    font-size: medium;
+    color: gray;
+}
+
+.notify-container form input::file-selector-button {
+    background-color: white;
+    border: none;
+    color: rgb(73, 73, 73)
+}
