@@ -13,10 +13,10 @@ const Footer = () => {
             <div>
                 <h3>About Us</h3>
                 <ul>
-                    <li>Our Mission</li>
+                    <li>Introduction</li>
                     <li>Our Team</li>
-                    <li>Our Impact</li>
-                    <li>Annual Reports</li>
+                    <li>Journey</li>
+                    <li>Gallery</li>
                     <li>Partners</li>
                     <li>Contact</li>
                 </ul>
