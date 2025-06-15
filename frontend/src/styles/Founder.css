@@ -1,0 +1,357 @@
+/* Founder.css — Premium & Modern UI */
+
+/* Root Container */
+.founder {
+  padding: 2rem;
+  background-color: var(--white);
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+/* Headings */
+.founder h2,
+.founder h3 {
+  text-align: center;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+
+.founder h2 {
+  font-size: 2.6rem;
+  position: relative;
+}
+
+.founder h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--highlight-color);
+  margin: 0.8rem auto 0;
+  border-radius: 2px;
+}
+
+.founder h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1f1f1f;
+}
+
+/* Founder Main Section */
+.founder-main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.founder-intro {
+  flex: 1 1 55%;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.founder-img {
+  flex: 1 1 40%;
+  min-width: 280px;
+}
+
+.founder-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+  box-shadow: 0 12px 30px var(--shadow-color);
+}
+
+/* Quote Section */
+.founder blockquote {
+  background: #fff6f6;
+  border-left: 6px solid #fe424d;
+  padding: 1.2rem 1.5rem;
+  font-style: italic;
+  border-radius: 0.75rem;
+  margin-top: 1.5rem;
+  color: #555;
+  max-width: 600px;
+}
+
+/* Full Width Content Section */
+.founder-content {
+  width: 100%;
+  padding: 1rem ;
+  margin: 0;
+  background: var(--background-color);
+}
+
+.founder-content .text {
+  padding: 1rem;
+}
+
+.founder-content .text p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #2e2e2e;
+}
+
+/* Achievements */
+.achievements {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.achievements div {
+  background: var(--white);
+  padding: 1.5rem;
+  border-left: 4px solid var(--highlight-color);
+  border-radius: 0.75rem;
+  font-weight: 500;
+  color: #222;
+  box-shadow: 0 6px 16px var(--shadow-color);
+  transition: transform 0.3s ease;
+}
+
+.achievements div:hover {
+  transform: translateY(-4px);
+}
+
+/* Social Icons */
+.social-links {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social-links a {
+  font-size: 2rem;
+  color: #555;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+  color: var(--highlight-color);
+  transform: scale(1.1);
+}
+
+/* Video Embed */
+.video-wrapper {
+  margin-top: 2.5rem;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px var(--shadow-color);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Recognition Section */
+.recognition-section {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.recognition-section h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #2d3436;
+}
+
+.recognition-section .logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.recognition-section img {
+  height: 60px;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.recognition-section img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Core Values */
+.core-values {
+  margin-top: 4rem;
+  background-color: #fffbea;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 15px var(--shadow-color);
+}
+
+.core-values ul {
+  list-style: none;
+  padding: 0;
+}
+
+.core-values li {
+  margin-bottom: 1rem;
+  font-size: 1.15rem;
+  color: #333;
+}
+
+.core-values li strong {
+  color: #e17055;
+}
+
+/* Journey & Milestones */
+.founder-timeline {
+  margin-top: 4rem;
+  background: var(--white);
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+.founder-timeline h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  color: var(--text-color);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.founder-timeline h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--highlight-color);
+  margin: 0.8rem auto 0;
+  border-radius: 2px;
+}
+
+.founder-timeline ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.founder-timeline li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.7;
+  border-left: 4px solid var(--highlight-color);
+}
+
+.founder-timeline li::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: var(--highlight-color);
+  border-radius: 50%;
+  position: absolute;
+  left: -8px;
+  top: 0.5rem;
+  border: 2px solid var(--white);
+  box-shadow: 0 0 0 3px var(--shadow-color);
+}
+
+/* Message from Founder */
+.founder-message {
+  margin-top: 4rem;
+  background: var(--primary-color);
+  padding: 3rem 2rem;
+  border-left: 6px solid var(--highlight-color);
+  border-radius: 1rem;
+  box-shadow: 0 12px 32px var(--shadow-color);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.founder-message h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  color: var(--text-color);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.founder-message h2::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: var(--highlight-color);
+  display: block;
+  margin: 0.8rem auto 0;
+  border-radius: 3px;
+}
+
+.founder-message p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #2f2f2f;
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .founder-main {
+    flex-direction: column;
+  }
+
+  .achievements {
+    grid-template-columns: 1fr;
+  }
+
+  .recognition-section .logos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .founder h2 {
+    font-size: 2.2rem;
+  }
+
+  .founder h3 {
+    font-size: 1.6rem;
+  }
+
+  .founder-content .text,
+  .founder-message,
+  .core-values,
+  .founder-timeline {
+    padding: 1.5rem;
+  }
+
+  .founder-content .text p,
+  .founder-message p,
+  .founder-timeline li {
+    font-size: 1rem;
+  }
+
+  .social-links a {
+    font-size: 1.8rem;
+  }
+}
