@@ -1,120 +1,221 @@
+/* =========================
+   Journey Section Styling
+   ========================= */
 .journey {
+  padding: 5rem 1rem;
   background-color: var(--background-color);
-  padding: 100px 20px;
   color: var(--text-color);
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
 }
 
-.journey h2 {
+/* =========================
+   Header
+   ========================= */
+.journey-header {
   text-align: center;
+  max-width: 900px;
+  margin: 0 auto 3.5rem auto;
+  padding: 0 1rem;
+}
+
+.journey-header h2 {
   font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 16px;
   color: var(--text-color);
+  margin-bottom: 1rem;
   position: relative;
 }
 
-.journey h2::after {
-  content: "";
-  width: 90px;
-  height: 4px;
-  background-color: var(--highlight-color);
-  display: block;
-  margin: 10px auto 0;
-  border-radius: 12px;
+.journey-header p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #444;
 }
 
-.journey > p {
-  text-align: center;
-  font-size: 1.2rem;
-  color: #4c6244;
-  margin: 0 auto 50px;
-  max-width: 850px;
-  line-height: 1.85;
-}
-
-.journey .content {
+/* =========================
+   Layout
+   ========================= */
+.journey-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 60px;
+  gap: 3rem;
   justify-content: center;
-  align-items: center;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
+  align-items: flex-start;
 }
 
-.journey .image {
+/* =========================
+   Left Column (Image + CTA)
+   ========================= */
+.journey-left {
   flex: 1;
-  min-width: 320px;
-  text-align: center;
-  transition: transform 0.4s ease;
+  min-width: 300px;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.journey .image img {
+.journey-img {
   width: 100%;
-  max-width: 500px;
-  border-radius: 18px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-  transition: transform 0.3s ease;
+  border-radius: 1.5rem;
+  box-shadow: 0 15px 40px var(--shadow-color);
+  margin-bottom: 2rem;
+  object-fit: cover;
 }
 
-.journey .image img:hover {
-  transform: scale(1.04);
+.journey-cta {
+  background: rgba(202, 232, 189, 0.65);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 1.2rem;
+  text-align: center;
+  box-shadow: 0 10px 25px var(--shadow-color);
+  transition: all 0.3s ease-in-out;
 }
 
-.journey .text {
-  flex: 1;
-  min-width: 320px;
-  font-size: 1.1rem;
-  color: #4a6441;
-  line-height: 1.9;
+.journey-cta h4 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  font-weight: 600;
 }
 
-.journey .text p {
-  margin-bottom: 24px;
+.join-btn {
+  background-color: var(--highlight-color);
+  color: var(--white);
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px var(--shadow-color);
 }
 
-.journey .text ul {
-  padding-left: 1rem;
+.join-btn:hover {
+  background-color: var(--text-color);
+  transform: translateY(-2px);
+}
+
+/* Extra Section under CTA */
+.journey-extra {
+  margin-top: 1.5rem;
+  color: #333;
+}
+
+.journey-extra p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.journey-bullets {
   list-style: none;
+  padding: 0;
+  text-align: left;
 }
 
-.journey .text ul li {
-  margin-bottom: 16px;
-  padding-left: 32px;
+.journey-bullets li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.2rem;
   position: relative;
-  font-weight: 500;
-  color: #3e5a35;
+  font-size: 0.95rem;
 }
 
-.journey .text ul li::before {
+.journey-bullets li::before {
   content: "✔";
   position: absolute;
   left: 0;
-  top: 0;
-  font-size: 1.1rem;
   color: var(--highlight-color);
-  font-weight: 700;
+  font-weight: bold;
 }
 
-/* Responsive Enhancements */
+/* =========================
+   Right Column (Timeline)
+   ========================= */
+.journey-right {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.journey-right::before {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--secondary-color);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 2rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -0.5rem;
+  top: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--highlight-color);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px var(--background-color);
+}
+
+.timeline-year {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+.timeline-content h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.timeline-content p {
+  color: #444;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+  line-height: 1.6;
+}
+
+/* =========================
+   Responsive & Animation
+   ========================= */
 @media (max-width: 768px) {
-  .journey h2 {
-    font-size: 2.3rem;
-  }
-
-  .journey > p {
-    font-size: 1.05rem;
-    margin-bottom: 40px;
-  }
-
-  .journey .content {
+  .journey-content {
     flex-direction: column;
-    gap: 40px;
+    align-items: stretch;
   }
 
-  .journey .text {
-    text-align: left;
+  .journey-left,
+  .journey-right {
+    max-width: 100%;
+  }
+
+  .journey-right::before {
+    left: 0.6rem;
+  }
+
+  .timeline-dot {
+    left: -0.2rem;
+  }
+
+  .journey-header h2 {
+    font-size: 2.2rem;
   }
 }

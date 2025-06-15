@@ -13,6 +13,12 @@ import {
   FaRegLightbulb,
 } from "react-icons/fa";
 
+import unLogo from "../../assets/un_logo.png";
+import forbesLogo from "../../assets/forbes-logo.png";
+import indiaTodayLogo from "../../assets/india-today-logo.png";
+import tedxLogo from "../../assets/tedx-logo.png";
+import whartonLogo from "../../assets/wharton-logo.png";
+
 export default function Founder() {
   return (
     <section className="founder">
@@ -58,7 +64,7 @@ export default function Founder() {
 
           <div className="achievements">
             <div>
-              <FaAward /> Padma Shri Awardee (2022)
+              <FaAward /> Nari Shakti Puraskar (2022)
             </div>
             <div>
               <FaGlobeAsia /> Represented India at UN SDG Panel (2019)
@@ -163,11 +169,11 @@ export default function Founder() {
       >
         <h3>Recognized & Featured By</h3>
         <div className="logos">
-          <img src="/assets/un_logo.png" alt="UN" />
-          <img src="/assets/forbes-logo.png" alt="Forbes" />
-          <img src="/assets/india-today-logo.png" alt="India Today" />
-          <img src="/assets/tedx-logo.png" alt="TEDx" />
-          <img src="/assets/wharton-logo.png" alt="Wharton" />
+          <img src={unLogo} alt="United Nations" />
+          <img src={forbesLogo} alt="Forbes" />
+          <img src={indiaTodayLogo} alt="India Today" />
+          <img src={tedxLogo} alt="TEDx" />
+          <img src={whartonLogo} alt="Wharton" />
         </div>
       </motion.div>
 
@@ -178,24 +184,26 @@ export default function Founder() {
         transition={{ delay: 0.4, duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h3>Her Leadership Philosophy</h3>
-        <ul>
-          <li>
-            <strong>Empathy First:</strong> Change begins by listening deeply.
-          </li>
-          <li>
-            <strong>Lead Locally:</strong> Nurture leadership from within the
-            community.
-          </li>
-          <li>
-            <strong>Collaborate Boldly:</strong> Global partnerships for local
-            wins.
-          </li>
-          <li>
-            <strong>Data-Driven Action:</strong> Every initiative is guided by
-            insight and impact.
-          </li>
-        </ul>
+        <section className="Leadership">
+          <h3>Her Leadership Philosophy</h3>
+          <ul>
+            <li>
+              <strong>Empathy First:</strong> Change begins by listening deeply.
+            </li>
+            <li>
+              <strong>Lead Locally:</strong> Nurture leadership from within the
+              community.
+            </li>
+            <li>
+              <strong>Collaborate Boldly:</strong> Global partnerships for local
+              wins.
+            </li>
+            <li>
+              <strong>Data-Driven Action:</strong> Every initiative is guided by
+              insight and impact.
+            </li>
+          </ul>
+        </section>
       </motion.div>
     </section>
   );
