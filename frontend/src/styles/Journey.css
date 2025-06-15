@@ -1,6 +1,3 @@
-/* =========================
-   Journey Section Styling
-   ========================= */
 .journey {
   padding: 5rem 1rem;
   background-color: var(--background-color);
@@ -9,9 +6,7 @@
   overflow-x: hidden;
 }
 
-/* =========================
-   Header
-   ========================= */
+
 .journey-header {
   text-align: center;
   max-width: 900px;
