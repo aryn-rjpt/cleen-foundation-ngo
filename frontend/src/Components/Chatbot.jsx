@@ -2,7 +2,7 @@ import React from 'react'
 
 const Chatbot = () => {
   return (
-    <div>Chatbot</div>
+    <h1 style={{textAlign: "center"}}>Chatbot Coming Soon</h1>
   )
 }
 

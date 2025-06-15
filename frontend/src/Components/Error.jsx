@@ -2,7 +2,7 @@ import React from 'react'
 
 const Error = () => {
   return (
-    <div>Error</div>
+    <h1 style={{textAlign: "center"}}>Uh-oh! Something Went Wrong!</h1>
   )
 }
 

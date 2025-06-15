@@ -169,10 +169,10 @@ const Admin = () => {
     <div className="admin-layout">
       <h1>Admin Dashboard</h1>
       <nav>
-        <NavLink to="/admin/Employees">Employees</NavLink>
-        <NavLink to="/admin/reports">Reports</NavLink>
-        <NavLink to="/admin/blogs">Blogs</NavLink>
-        <NavLink to="/admin/notify">Notify</NavLink>
+        <NavLink to="Employees">Employees</NavLink>
+        <NavLink to="reports">Reports</NavLink>
+        <NavLink to="blogs">Blogs</NavLink>
+        <NavLink to="notify">Notify</NavLink>
       </nav>
       <Outlet />
     </div>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <h1 style={{textAlign: "center"}}>Contacts Coming Soon</h1>
   )
 }
 

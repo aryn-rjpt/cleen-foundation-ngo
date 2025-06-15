@@ -33,7 +33,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/clean-foundation-ngo',
     element: <App />,
     errorElement: <Error />,
     children: [

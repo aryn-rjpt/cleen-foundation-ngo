@@ -2,7 +2,7 @@ import React from 'react'
 
 const Donation = () => {
   return (
-    <div>Donation</div>
+    <h1 style={{textAlign: "center"}}>Donation Coming Soon</h1>
   )
 }
 

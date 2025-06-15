@@ -10,22 +10,22 @@ export default function AboutLayout() {
     <div className="about-layout">
       <h1>About Cleen Foundation</h1>
       <nav className="about-nav">
-        <NavLink to="/about" end className={getNavLinkClass}>
+        <NavLink to="" end className={getNavLinkClass}>
           Introduction
         </NavLink>
-        <NavLink to="/about/journey" className={getNavLinkClass}>
+        <NavLink to="journey" className={getNavLinkClass}>
           Journey
         </NavLink>
-        <NavLink to="/about/founder" className={getNavLinkClass}>
+        <NavLink to="founder" className={getNavLinkClass}>
           Founder
         </NavLink>
-        <NavLink to="/about/team" className={getNavLinkClass}>
+        <NavLink to="team" className={getNavLinkClass}>
           Team
         </NavLink>
-        <NavLink to="/about/gallery" className={getNavLinkClass}>
+        <NavLink to="gallery" className={getNavLinkClass}>
           Gallery
         </NavLink>
-        <NavLink to="/about/partners" className={getNavLinkClass}>
+        <NavLink to="partners" className={getNavLinkClass}>
           Partners
         </NavLink>
       </nav>

@@ -195,7 +195,7 @@
 /* Core Values */
 .core-values {
   margin-top: 4rem;
-  background-color: #fffbea;
+  background-color: var(--primary-color);
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 6px 15px var(--shadow-color);
@@ -213,7 +213,7 @@
 }
 
 .core-values li strong {
-  color: #e17055;
+  color: var(--text-color);
 }
 
 /* Journey & Milestones */
