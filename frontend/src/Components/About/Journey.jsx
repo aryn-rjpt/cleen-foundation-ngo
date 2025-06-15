@@ -1,5 +1,5 @@
 import React from "react";
-import journeyImg from "../../assets/journey.jpg"; 
+import journeyImg from "../../assets/voice.jpg"; 
 
 const Journey = () => {
   return (

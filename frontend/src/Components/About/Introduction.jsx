@@ -4,12 +4,14 @@ import "../../styles/About.css";
 
 import introImg from "../../assets/tempLogo.png";
 import missionImg from "../../assets/mission.png";
-import workImg from "../../assets/work.jpg";
-import volunteerImg from "../../assets/volunteer.jpg";
+import workImg1 from "../../assets/awareness.jpg";
+import workImg2 from "../../assets/skill_developement.jpg";
+import workImg3 from "../../assets/clean_drive.png";
+import volunteerImg from "../../assets/voice.jpg";
 import journeyImg from "../../assets/journey.jpg"; // ✅ Add journey image
-import sdg1 from "../../assets/sdg1.png";
-import sdg2 from "../../assets/sdg2.png";
-import sdg3 from "../../assets/sdg3.png";
+import sdg1 from "../../assets/health.jpg";
+import sdg2 from "../../assets/gender.jpg";
+import sdg3 from "../../assets/climate.png";
 
 export default function Introduction() {
   return (
@@ -80,7 +82,7 @@ export default function Introduction() {
         <h2>Our Work in Action</h2>
         <div className="content-grid">
           <div className="card">
-            <img src={workImg} alt="Workshop" />
+            <img src={workImg1} alt="Workshop" />
             <h3>Awareness Workshops</h3>
             <p>
               Conducting interactive sessions in schools and local communities
@@ -88,7 +90,7 @@ export default function Introduction() {
             </p>
           </div>
           <div className="card">
-            <img src={workImg} alt="Training" />
+            <img src={workImg2} alt="Training" />
             <h3>Skill Development</h3>
             <p>
               Providing hands-on vocational training and startup support to
@@ -96,7 +98,7 @@ export default function Introduction() {
             </p>
           </div>
           <div className="card">
-            <img src={workImg} alt="Campaign" />
+            <img src={workImg3} alt="Campaign" />
             <h3>Cleanliness Drives</h3>
             <p>
               Leading sustainable practices campaigns: tree plantations,

@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../../styles/Founder.css";
-import founderImg from "../../assets/founder.jpg";
+import founderImg from "../../assets/voice.jpg";
 import {
   FaTwitter,
   FaLinkedin,
@@ -163,7 +163,7 @@ export default function Founder() {
       >
         <h3>Recognized & Featured By</h3>
         <div className="logos">
-          <img src="/assets/un-logo.png" alt="UN" />
+          <img src="/assets/un_logo.png" alt="UN" />
           <img src="/assets/forbes-logo.png" alt="Forbes" />
           <img src="/assets/india-today-logo.png" alt="India Today" />
           <img src="/assets/tedx-logo.png" alt="TEDx" />
