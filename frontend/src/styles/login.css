@@ -1,66 +1,98 @@
 body {
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-.login-container {
-  min-height: 83vh;
-  background: linear-gradient(to right, #c8e6c9, #a5d6a7);
+/* Page background and overlay */
+.login-page {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -60px;
+  padding: 40px 20px;
+  margin-bottom: -160px;
 }
 
+.login-overlay {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: 0;
+}
+
+/* Login box */
 .login-box {
-  background-color: #e8f5e9;
-  border: 2px solid #66bb6a;
-  border-radius: 14px;
-  padding: 2rem;
-  width: 400px;
-  box-shadow: 0 6px 15px rgba(0, 100, 0, 0.15);
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--shadow-color);
   text-align: center;
-  margin-top: -60px;
 }
 
 .login-box h2 {
-  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+}
+
+/* Form styles */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-form label {
+  text-align: left;
+  font-weight: bold;
   color: var(--text-color);
 }
 
-.login-box input {
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border: 1px solid #81c784;
-  border-radius: 8px;
-  font-size: 14px;
+.login-form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--highlight-color);
+  background-color: var(--highlight-color);
+  font-size: 1rem;
+  color: var(--text-color);
 }
 
-.login-box button {
-  width: 100%;
-  padding: 12px;
+.login-form button {
   margin-top: 10px;
-  background-color: #66bb6a;
-  color: white;
+  padding: 12px;
+  background-color: var(--primary-color);
   border: none;
+  color: white;
+  font-size: 1rem;
   border-radius: 8px;
-  font-weight: bold;
   cursor: pointer;
 }
 
-.login-box button:hover {
-  background-color: #b8eebb;
+.login-form button:hover {
+  background-color: var(--text-color);
 }
 
-.register-link {
-  margin-top: 14px;
+.login-footer {
+  margin-top: 20px;
   font-size: 0.9rem;
-  color: #2e7d32;
+  color: var(--text-color);
 }
 
-.register-link span {
-  cursor: pointer;
-  color: #1b5e20;
+.login-footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-footer a:hover {
   text-decoration: underline;
 }

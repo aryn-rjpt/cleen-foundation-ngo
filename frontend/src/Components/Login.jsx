@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
+import donationImage from "../assets/donation.png"
 
 import '../styles/Login.css'
 
@@ -12,19 +13,22 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container">
-      <form className="login-box" onSubmit={handleLogin}>
-        <h2>Welcome Back!</h2>
-        <input type="email" placeholder="Email" required />
-        <input type="password" placeholder="Password" required />
-        <button type="submit">Login</button>
-        <p className="register-link">
-        Not registered?{' '}
-        <span onClick={() => navigate('/cleen-foundation-ngo/register')}>Register Now</span>
-        </p>
+    <div className="login-page" style={{ backgroundImage: `url(${donationImage})` }}>
+    <div className="login-overlay" />
 
+    <div className="login-box">
+      <h2>Login to Your Account</h2>
+      <form className="login-form">
+        <label>Email</label>
+        <input type="email" placeholder="you@example.com" required />
+
+        <label>Password</label>
+        <input type="password" placeholder="Enter your password" required />
+
+        <button type="submit">Login</button>
       </form>
     </div>
+  </div>
   );
 };
 
