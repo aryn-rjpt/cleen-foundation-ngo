@@ -20,7 +20,7 @@ const Login = () => {
         <button type="submit">Login</button>
         <p className="register-link">
         Not registered?{' '}
-        <span onClick={() => navigate('/register')}>Register Now</span>
+        <span onClick={() => navigate('/cleen-foundation-ngo/register')}>Register Now</span>
         </p>
 
       </form>

@@ -2,7 +2,6 @@
   padding: 20px 30px;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-  background-color: var(--primary-color);
 }
 
 .admin-layout h1 {
@@ -28,6 +27,7 @@
   transition: all 0.3s ease;
   font-weight: 500;
   border: 2px solid transparent;
+  background-color: var(--background-color);
 }
 
 .admin-layout nav a:hover {
@@ -42,64 +42,9 @@
   background-color: transparent;
 }
 
-table {
-  width: 100%;
-  border: 2px solid var(--secondary-color);
-  background-color: var(--background-color);
-  border-collapse: collapse;
-}
-
-table th,
-table td {
-  padding: 12px;
-  text-align: left;
-}
-
-table th {
-  border-bottom: 2px solid var(--secondary-color);
-}
-
 .employee-container h3 {
   margin: 1rem;
   font-weight: 500;
-}
-
-table button {
-  padding: 8px 12px;
-  border-radius: 8px;
-  border: 2px solid var(--secondary-color);
-  background-color: var(--primary-color);
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
-  overflow: hidden;
-}
-
-
-table button::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  width: 50px;
-  height: 50px;
-  border-radius: inherit;
-  scale: 0;
-  z-index: -1;
-  background-color: var(--secondary-color);
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
-}
-
-table button:hover::before {
-  scale: 3;
-}
-
-table button:hover {
-  scale: 1.1;
-  box-shadow: 0px 0px 13px 10px rgba(190, 240, 188, 0.4);
-}
-
-table button:active {
-  scale: 1;
 }
 
 .blogs-container>button,
@@ -130,7 +75,7 @@ table button:active {
   border-radius: inherit;
   scale: 0;
   z-index: -1;
-  background-color: rgb(255, 182, 182);
+  background-color: var(--highlight-color);
   transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
@@ -163,44 +108,46 @@ table button:active {
 }
 
 
-.notify-container form input, .notify-container form textarea  {
-    border: 2px solid var(--secondary-color);
-    border-radius: 17px;
-    height: 3rem;
-    display: block;
-    width: 100%;
-    font-size: large;
-    padding: 1rem;
-    color: #000000c7;
-    background-color: var(--background-color);
+.notify-container form input,
+.notify-container form textarea {
+  border: 2px solid var(--secondary-color);
+  border-radius: 17px;
+  height: 3rem;
+  display: block;
+  width: 100%;
+  font-size: large;
+  padding: 1rem;
+  color: #000000c7;
+  background-color: var(--background-color);
 }
 
-.notify-container form textarea{
+.notify-container form textarea {
   height: 5rem;
 }
 
-.notify-container form input:focus-visible, .notify-container form textarea:focus-visible {
-    border-color: var(--text-color);
-    outline: none
+.notify-container form input:focus-visible,
+.notify-container form textarea:focus-visible {
+  border-color: var(--text-color);
+  outline: none
 }
 
 .notify-container form label {
-    color: #565656;
-    font-size: larger;
-    padding-left: .2rem;
-    display: block;
-    width: 100%;
-    margin: 1rem 0rem .5rem 0rem;
+  color: #565656;
+  font-size: larger;
+  padding-left: .2rem;
+  display: block;
+  width: 100%;
+  margin: 1rem 0rem .5rem 0rem;
 }
 
 .notify-container form input[type="file"] {
-    padding: 0.7rem 1.5rem;
-    font-size: medium;
-    color: gray;
+  padding: 0.7rem 1.5rem;
+  font-size: medium;
+  color: gray;
 }
 
 .notify-container form input::file-selector-button {
-    background-color: white;
-    border: none;
-    color: rgb(73, 73, 73)
+  background-color: white;
+  border: none;
+  color: rgb(73, 73, 73)
 }

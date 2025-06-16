@@ -19,7 +19,7 @@ export default function Introduction() {
       {/* Hero Banner */}
       <section className="hero">
         <div className="hero-content">
-          <h1>Clean Foundation</h1>
+          <h1>Cleen Foundation</h1>
           <p>
             Transforming lives through sustainable solutions and community
             empowerment.
@@ -31,12 +31,12 @@ export default function Introduction() {
       <section className="about-us">
         <div className="content">
           <div className="image">
-            <img src={introImg} alt="About Clean Foundation" />
+            <img src={introImg} alt="About Cleen Foundation" />
           </div>
           <div className="text">
             <h2>Who We Are</h2>
             <p>
-              Clean Foundation is a community-powered NGO working to promote
+              Cleen Foundation is a community-powered NGO working to promote
               environmental sustainability, social equity, and educational
               access. We partner with grassroots organizations to deliver
               real-world solutions to today’s most urgent challenges.
@@ -177,7 +177,7 @@ export default function Introduction() {
         <div className="content">
           <h2>Explore Our Journey</h2>
           <p>
-            Dive into our detailed report showcasing how Clean Foundation is
+            Dive into our detailed report showcasing how Cleen Foundation is
             shaping a sustainable and inclusive tomorrow.
           </p>
           <a className="download-btn" href="#" download>

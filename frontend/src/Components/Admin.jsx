@@ -106,14 +106,14 @@ export const Blogs = () => {
         <tbody>
           <tr>
             <td>1</td>
-            <td>Clean Foundation's Impact</td>
+            <td>Cleen Foundation's Impact</td>
             <td>John Doe</td>
             <td>10th September 2024</td>
             <td><button>Edit</button></td>
           </tr>
           <tr>
             <td>2</td>
-            <td>Community Clean-Up Day</td>
+            <td>Community Cleen-Up Day</td>
             <td>Jane Smith</td>
             <td>1st January 2025</td>
             <td><button>Edit</button></td>

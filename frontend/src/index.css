@@ -1,123 +1,85 @@
-/* ===============================
-   Team Section Styles – Custom NGO Theme
-   =============================== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 :root {
-  --text-color: #2e7d32;
-  --primary-color: #cae8bd;
-  --secondary-color: #b0db9c;
-  --background-color: #ecfae5;
-  --white: #ffffff;
-  --highlight-color: #7dbf6b;
+  --text-color: #03357d;
+  --primary-color: #02347e;
+  --secondary-color: #f7ac37;
+  --background-color: #e9f2ff;
+  --highlight-color: #fce0bb;
   --shadow-color: rgba(96, 122, 84, 0.15);
 }
 
-.team-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 3rem 1rem;
-  font-family: 'Poppins', sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
   background-color: var(--background-color);
-  color: var(--text-color);
+  margin: 0;
+  padding: 0;
 }
 
-.team-intro {
-  text-align: center;
-  margin-bottom: 3rem;
+html {
+  scroll-behavior: smooth;
 }
 
-.team-intro h2 {
-  font-size: 2.8rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  color: var(--text-color);
+table {
+  width: 100%;
+  border: 2px solid var(--primary-color);
+  background-color: var(--shadow-color);
+  border-collapse: collapse;
 }
 
-.team-intro p {
-  font-size: 1.05rem;
-  color: #4a4a4a;
-  line-height: 1.8;
-  max-width: 850px;
-  margin: 0 auto;
+table th,
+table td {
+  padding: 12px;
+  text-align: left;
 }
 
-.team-section {
-  margin-bottom: 4rem;
+table th {
+  border-bottom: 2px solid var(--primary-color);
 }
 
-.team-section h3 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  position: relative;
-  padding-bottom: 0.5rem;
-  display: inline-block;
-  border-bottom: 3px solid var(--highlight-color);
-  font-weight: 600;
-  color: var(--text-color);
+
+table button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 2px solid var(--secondary-color);
+  background-color: var(--highlight-color);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  overflow: hidden;
 }
 
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
+
+table button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color: var(--secondary-color);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
-.team-card {
-  background: var(--white);
-  border-radius: 1.5rem;
-  padding: 2rem 1rem;
-  text-align: center;
-  box-shadow: 0 10px 20px var(--shadow-color);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+table button:hover::before {
+  scale: 3;
 }
 
-.team-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(96, 122, 84, 0.25);
+table button:hover {
+  scale: 1.1;
+  box-shadow: 0px 0px 13px 10px rgba(190, 240, 188, 0.4);
 }
 
-.team-photo {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-  border: 4px solid var(--highlight-color);
-  box-shadow: 0 4px 12px var(--shadow-color);
-}
-
-.team-card h4 {
-  font-size: 1.3rem;
-  color: var(--text-color);
-  margin: 0.6rem 0 0.3rem;
-  font-weight: 600;
-}
-
-.team-card p {
-  font-size: 1rem;
-  color: #555;
-  font-weight: 500;
-}
-
-/* ===============================
-   Responsive Adjustments
-   =============================== */
-
-@media (max-width: 768px) {
-  .team-intro h2 {
-    font-size: 2rem;
-  }
-
-  .team-section h3 {
-    font-size: 1.6rem;
-  }
-
-  .team-photo {
-    width: 110px;
-    height: 110px;
-  }
-
-  .team-card {
-    padding: 1.5rem 1rem;
-  }
+table button:active {
+  scale: 1;
 }
