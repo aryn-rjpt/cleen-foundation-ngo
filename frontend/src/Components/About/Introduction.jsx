@@ -2,7 +2,7 @@ import React from "react";
 import "../../styles/Introduction.css";
 import "../../styles/About.css";
 
-import introImg from "../../assets/tempLogo.png";
+import introImg from "../../assets/Logo.png";
 import missionImg from "../../assets/mission.png";
 import workImg1 from "../../assets/awareness.jpg";
 import workImg2 from "../../assets/skill_developement.jpg";

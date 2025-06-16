@@ -1,28 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
-
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Only Color part updated By Shivam  */
 :root {
-  --text-color: #03357d;
-  --primary-color: #02347e;
-  --secondary-color: #f7ac37;
-  --background-color: #e9f2ff;
-  --highlight-color: #fce0bb;
-  --shadow-color: rgba(96, 122, 84, 0.15);
+  --text-color: #023047;
+  --primary-color: #0466c8;
+  --secondary-color: #fcbf49;
+  --background-color: #f0f8ff;
+  --highlight-color: #e3f2fd;
+  --shadow-color: rgba(4, 102, 200, 0.12);
 }
+
 
 body {
   font-family: "Poppins", sans-serif;
@@ -35,6 +28,8 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+
 
 table {
   width: 100%;
