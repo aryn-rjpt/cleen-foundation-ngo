@@ -1,9 +1,8 @@
 .contact-container {
   background-color: var(--background-color);
-  padding: 70px 200px 70px 200px;
+  padding: 70px 200px 0 200px;
   font-family: "Segoe UI", sans-serif;
   color: var(--text-color);
-  margin-top: 50px;
 }
 
 .contact-heading {

@@ -6,10 +6,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* Only Color part updated By Shivam  */
+
 :root {
   --text-color: #023047;
-  --primary-color: #0466c8;
+  --primary-color: #03347b;
+  --shivam-primary-color: #0466c8;
   --secondary-color: #fcbf49;
   --background-color: #f0f8ff;
   --highlight-color: #e3f2fd;
