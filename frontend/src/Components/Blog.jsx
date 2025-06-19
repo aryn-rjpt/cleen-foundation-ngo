@@ -13,97 +13,98 @@ const Blog = () => {
     <div className='blog-container'>
 
       <div className='blogs'>
-      <form action="">
-        <input type="text" placeholder='Search among 463 blogs' />
-        <button>Search</button>
-      </form>
+        <form action="">
+          <input type="text" placeholder='Search among 463 blogs' />
+          <button>Search</button>
+        </form>
         <div className="blog-card">
           <img src={blog1} alt="" />
-          <p className="blog-heading">
+          <div className="blog-heading">
             Empowering Rural Youth Through Digital Literacy
-          </p>
-          <p>
+          </div>
+          <div className="blog-desc">
             Discover how Cleen Foundation’s new programs are bridging the digital divide in underserved communities.
-          </p>
+          </div>
           <button>Read More</button>
         </div>
 
         <div className="blog-card">
           <img src={blog2} alt="" />
-          <p className="blog-heading">
+          <div className="blog-heading">
             Clean Water, Brighter Futures: Our Mission in Action
-          </p>
-          <p>
+          </div>
+          <div className="blog-desc">
             Highlights from our recent clean water projects impacting over 1,000 families.
-          </p>
+          </div>
           <button>Read More</button>
         </div>
 
         <div className="blog-card">
           <img src={blog3} alt="" />
-          <p className="blog-heading">
+          <div className="blog-heading">
             Voices of Change: Stories from Our Volunteers
-          </p>
-          <p>
+          </div>
+          <div className="blog-desc">
             Meet the passionate individuals driving grassroots change with Cleen Foundation.
-          </p>
+          </div>
           <button>Read More</button>
         </div>
 
         <div className="blog-card">
           <img src={blog4} alt="" />
-          <p className="blog-heading">
+          <div className="blog-heading">
             Sustainable Education: Building Schools That Last
-          </p>
-          <p>
+          </div>
+          <div className="blog-desc">
             How eco-friendly infrastructure is shaping the future of rural education.
-          </p>
+          </div>
           <button>Read More</button>
         </div>
 
         <div className="blog-card">
           <img src={blog5} alt="" />
-          <p className="blog-heading">
+          <div className="blog-heading">
             The Power of Partnership: Corporate Collaboration for Good
-          </p>
-          <p>
+          </div>
+          <div className="blog-desc">
             See how alliances with businesses are accelerating our impact.
-          </p>
+          </div>
           <button>Read More</button>
         </div>
 
         <div className="blog-card">
           <img src={blog6} alt="" />
-          <p className="blog-heading">
+          <div className="blog-heading">
             Health Camps That Heal: A Month of Outreach
-          </p>
-          <p>
+          </div>
+          <div className="blog-desc">
             A look at our free medical camps and the lives they’ve transformed.
-          </p>
+          </div>
           <button>Read More</button>
         </div>
 
         <div className="blog-card">
           <img src={blog7} alt="" />
-          <p className="blog-heading">
+          <div className="blog-heading">
             From Idea to Impact: The Journey of a Cleen Foundation Project
-          </p>
-          <p>
+          </div>
+          <div className="blog-desc">
             Behind the scenes of how a community idea becomes a reality.
-          </p>
+          </div>
           <button>Read More</button>
         </div>
 
         <div className="blog-card">
           <img src={blog8} alt="" />
-          <p className="blog-heading">
+          <div className="blog-heading">
             Why Education Is at the Heart of Every Solution
-          </p>
-          <p>
+          </div>
+          <div className="blog-desc">
             Explore why Cleen Foundation believes learning is key to ending poverty.
-          </p>
+          </div>
           <button>Read More</button>
         </div>
+
 
       </div>
 

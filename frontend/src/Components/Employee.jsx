@@ -9,9 +9,7 @@ const Employee = () => {
         <button>Search</button>
       </form>
 
-      <div>
-
-
+      <div className='table-container'>
         <table>
           <thead>
             <tr>

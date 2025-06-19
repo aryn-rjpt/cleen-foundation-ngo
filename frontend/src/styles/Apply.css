@@ -100,3 +100,15 @@
 .application-container button:active {
     scale: 1;
 }
+
+@media screen and (max-width: 768px) {
+    .application-container form {
+        margin: 2rem 1rem;
+    }
+
+    .application-row {
+        flex-direction: column;
+        gap: unset;
+    }
+
+}

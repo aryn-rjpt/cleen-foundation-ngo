@@ -87,3 +87,7 @@ table button:hover {
 table button:active {
   scale: 1;
 }
+
+.table-container {
+  overflow-x: auto;
+}

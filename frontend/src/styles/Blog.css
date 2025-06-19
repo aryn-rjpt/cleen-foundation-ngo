@@ -114,11 +114,17 @@
   filter: blur(20px);
 }
 
-.blog-heading {
-  font-size: 18px;
+.blog-card .blog-heading {
+  font-size: 20px;
   text-transform: capitalize;
-  font-weight: 500;
-  max-height: 100px;
+  font-weight: 700;
+  height: 17%;
+  overflow: hidden;
+}
+
+.blog-card .blog-desc {
+    height: 10%;
+    font-size: 13px;
 }
 
 .blog-card p:not(.blog-heading) {
@@ -146,14 +152,14 @@
 .blog-card button {
   width: 67%;
   margin: auto;
-  height: 2rem;
+  height: 10%;
   background-color: #6366f1;
   color: white;
   border-radius: 6px;
   font-weight: 400;
   transition: all 0.5s ease;
   cursor: pointer;
-  border: none
+  border: none;
 }
 
 .blog-card button:hover {

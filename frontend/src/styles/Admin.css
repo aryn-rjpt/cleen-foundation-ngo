@@ -48,6 +48,10 @@
   font-weight: 500;
 }
 
+.employee-container {
+  overflow-x: auto;
+}
+
 .blogs-container>button,
 .notify-container button,
 .employee-container>button {
