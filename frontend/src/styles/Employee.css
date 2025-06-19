@@ -1,67 +1,64 @@
 .empdir-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-<<<<<<< HEAD
-    margin-top: 3rem;
-=======
-    margin: 60px 0; /* Added vertical spacing */
->>>>>>> 9bc2bbb (Add navbar and footer)
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 150px auto /* You can switch to margin: 60px 0 if preferred */
 }
 
 .empdir-container form {
-    width: 15rem;
+  width: 15rem;
 }
 
 .empdir-container form input {
-    width: 100%;
-    padding: 10px;
-    margin: 1rem 0;
-    border: 1px solid #ccc;
-    border-radius: 9px;
+  width: 100%;
+  padding: 10px;
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 9px;
 }
 
 .empdir-container form button {
-    padding: 0.5rem 1rem;
-    background-color: var(--highlight-color);
-    border: 2px solid var(--secondary-color);
-    border-radius: 7px;
-    cursor: pointer;
-    margin: auto;
-    display: block;
-    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
-    overflow: hidden;
+  padding: 0.5rem 1rem;
+  background-color: var(--highlight-color);
+  border: 2px solid var(--secondary-color);
+  border-radius: 7px;
+  cursor: pointer;
+  margin: auto;
+  display: block;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  overflow: hidden;
+  position: relative; /* Required for ::before to animate properly */
 }
 
 .empdir-container form button::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    margin: auto;
-    width: 50px;
-    height: 50px;
-    border-radius: inherit;
-    scale: 0;
-    z-index: -1;
-    background-color: var(--secondary-color);
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: inherit;
+  scale: 0;
+  z-index: -1;
+  background-color: var(--secondary-color);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
-.empdir-container button:hover::before {
-    scale: 3;
+.empdir-container form button:hover::before {
+  scale: 3;
 }
 
-.empdir-container button:hover {
-    scale: 1.1;
-    color: white;
-    box-shadow: 0px 0px 13px 10px rgba(190, 240, 188, 0.4);
+.empdir-container form button:hover {
+  scale: 1.1;
+  color: white;
+  box-shadow: 0px 0px 13px 10px rgba(190, 240, 188, 0.4);
 }
 
-.empdir-container button:active {
-    scale: 1;
+.empdir-container form button:active {
+  scale: 1;
 }
 
 .empdir-container > div {
-    width: 75%;
-    margin: 3rem;
+  width: 75%;
+  margin: 3rem;
 }

@@ -1,5 +1,6 @@
-.application-container{
-    margin-top: 3rem;
+.application-container {
+    padding-top: 160px; /* ✅ Prevent overlap with fixed navbar */
+    margin-bottom: 4rem;
 }
 
 .application-container h1 {
@@ -11,9 +12,6 @@
     margin: 2rem 6rem;
     display: flex;
     flex-direction: column;
-}
-.application-container{
-    margin: 80px 0;
 }
 
 .application-row {
@@ -39,7 +37,7 @@
 
 .application-container form input:focus-visible {
     border-color: var(--primary-color);
-    outline: none
+    outline: none;
 }
 
 .application-container form label {
@@ -60,7 +58,7 @@
 .application-container form input::file-selector-button {
     background-color: white;
     border: none;
-    color: rgb(73, 73, 73)
+    color: rgb(73, 73, 73);
 }
 
 .application-container button {
@@ -73,8 +71,8 @@
     background-color: var(--highlight-color);
     transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
     overflow: hidden;
+    position: relative;
 }
-
 
 .application-container button::before {
     content: '';
@@ -104,6 +102,7 @@
     scale: 1;
 }
 
+/* ✅ Responsive Styles */
 @media screen and (max-width: 768px) {
     .application-container form {
         margin: 2rem 1rem;
@@ -113,5 +112,4 @@
         flex-direction: column;
         gap: unset;
     }
-
 }

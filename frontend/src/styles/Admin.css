@@ -2,11 +2,7 @@
   padding: 20px 30px;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-<<<<<<< HEAD
-  margin-top: 3rem;
-=======
-  margin: 100px 0;
->>>>>>> 9bc2bbb (Add navbar and footer)
+  margin: 150px 0; /* ✅ Kept your local change, feel free to adjust */
 }
 
 .admin-layout h1 {
@@ -43,7 +39,7 @@
   background-color: var(--secondary-color);
 }
 
-.admin-layout>div {
+.admin-layout > div {
   background-color: transparent;
 }
 
@@ -56,9 +52,9 @@
   overflow-x: auto;
 }
 
-.blogs-container>button,
+.blogs-container > button,
 .notify-container button,
-.employee-container>button {
+.employee-container > button {
   padding: 0.5rem 1rem;
   border-radius: 0.7rem;
   background-color: cornsilk;
@@ -68,13 +64,12 @@
   display: block;
   transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
   overflow: hidden;
+  position: relative; /* required for ::before */
 }
 
-
-
-.blogs-container>button::before,
+.blogs-container > button::before,
 .notify-container button::before,
-.employee-container>button::before {
+.employee-container > button::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -88,25 +83,24 @@
   transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
-.blogs-container>button:hover::before,
+.blogs-container > button:hover::before,
 .notify-container button:hover::before,
-.employee-container>button:hover::before {
+.employee-container > button:hover::before {
   scale: 3;
 }
 
-.blogs-container>button:hover,
+.blogs-container > button:hover,
 .notify-container button:hover,
-.employee-container>button:hover {
+.employee-container > button:hover {
   scale: 1.1;
   box-shadow: 0px 0px 13px 5px rgba(90, 83, 83, 0.4);
 }
 
-.blogs-container>button:active,
+.blogs-container > button:active,
 .notify-container button:active,
-.employee-container>button:active {
+.employee-container > button:active {
   scale: 1;
 }
-
 
 .notify-container form {
   display: flex;
@@ -115,7 +109,6 @@
   margin: 20px auto;
   max-width: 500px;
 }
-
 
 .notify-container form input,
 .notify-container form textarea {
@@ -137,16 +130,16 @@
 .notify-container form input:focus-visible,
 .notify-container form textarea:focus-visible {
   border-color: var(--text-color);
-  outline: none
+  outline: none;
 }
 
 .notify-container form label {
   color: #565656;
   font-size: larger;
-  padding-left: .2rem;
+  padding-left: 0.2rem;
   display: block;
   width: 100%;
-  margin: 1rem 0rem .5rem 0rem;
+  margin: 1rem 0 0.5rem 0;
 }
 
 .notify-container form input[type="file"] {
@@ -158,5 +151,5 @@
 .notify-container form input::file-selector-button {
   background-color: white;
   border: none;
-  color: rgb(73, 73, 73)
+  color: rgb(73, 73, 73);
 }

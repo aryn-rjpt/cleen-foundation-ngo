@@ -1,39 +1,28 @@
-<<<<<<< HEAD
-nav {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10rem;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    background-color: var(--primary-color);
-    padding: 1rem;
-    position: fixed;
-    top: 0;
-    width: 80%;
-    margin: 2rem;
-    z-index: 1;
-    border-radius: 1rem;
-    border: 7px solid var(--primary-color);
-    align-items: center;
-    height: 5rem;
-    box-shadow: 0 0 0 2px white inset;
-    transition: top 0.5s ease;
-=======
 .navbar-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: var(--white);
   box-shadow: 0 6px 20px var(--shadow-color);
-  position: sticky;
-  top: 0;
   z-index: 1000;
   padding: 1.2rem 2rem;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
+  transition: top 0.4s ease-in-out, background-color 0.3s ease, opacity 0.3s ease;
   border-bottom: 1px solid rgba(0, 0, 0, 0.03);
-  transition: background-color 0.3s ease;
->>>>>>> 9bc2bbb (Add navbar and footer)
+}
+
+.navbar-header.show {
+  top: 0;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.navbar-header.hide {
+  top: -100%;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .navbar-container {
@@ -45,26 +34,19 @@ nav ul {
   font-family: var(--font-family);
 }
 
-<<<<<<< HEAD
-nav img {
-    width: 7rem;
-    margin-top: -0.2rem;
-    background: white;
-    border-radius: 50%;
-    border: 3px solid var(--secondary-color);
-=======
-/* Logo */
 .navbar-logo img {
   height: 56px;
   border-radius: var(--radius);
   transition: transform 0.3s ease;
-}
-.navbar-logo img:hover {
-  transform: scale(1.05);
->>>>>>> 9bc2bbb (Add navbar and footer)
+  /* border: 3px solid var(--secondary-color); */
+  background: white;
 }
 
-/* Navigation Links */
+.navbar-logo img:hover {
+  transform: scale(1.05);
+}
+
+
 .navbar-links {
   list-style: none;
   display: flex;
@@ -84,7 +66,7 @@ nav img {
   transition: all 0.3s ease;
 }
 
-/* Underline hover and active */
+/* Hover underline animation */
 .navbar-links li a::after {
   content: "";
   position: absolute;
@@ -97,29 +79,23 @@ nav img {
 }
 
 .navbar-links li a.active {
- color: var(--primary-color);
+  color: var(--primary-color);
 }
-.navbar-links li a:hover
- {
-  background: linear-gradient(
-    to right,
-    var(--primary-color),
-    var(--secondary-color)
-  );
+
+.navbar-links li a:hover {
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
   color: #fff !important;
-  border: none;
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
-   padding: 0.45rem 1.1rem;
+  padding: 0.45rem 1.1rem;
 }
-
 
 .navbar-links li a.active::after {
   width: 100%;
 }
 
-/* CTA Button */
+
 .navbar-links li.cta a {
   background: var(--primary-color);
   color: var(--white);
@@ -131,20 +107,14 @@ nav img {
 }
 
 .navbar-links li.cta a:hover {
-  background: linear-gradient(
-    to right,
-    var(--primary-color),
-    var(--secondary-color)
-  );
-  color: #fff !important;
-  border: none;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  color: white;
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
-   padding: 0.45rem 1.1rem;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .navbar-container {
     flex-direction: column;

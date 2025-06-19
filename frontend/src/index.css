@@ -1,10 +1,10 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 :root {
@@ -15,11 +15,10 @@
   --background-color: #f0f8ff;
   --highlight-color: #e3f2fd;
   --shadow-color: rgba(4, 102, 200, 0.12);
-   --white: #ffffff;
+  --white: #ffffff;
   --radius: 12px;
-  --font-family: 'Poppins', sans-serif;
+  --font-family: "Poppins", sans-serif;
 }
-
 
 body {
   font-family: "Poppins", sans-serif;
@@ -27,13 +26,12 @@ body {
   background-color: var(--background-color);
   margin: 0;
   padding: 0;
+
 }
 
 html {
   scroll-behavior: smooth;
 }
-
-
 
 table {
   width: 100%;
@@ -52,20 +50,18 @@ table th {
   border-bottom: 2px solid var(--primary-color);
 }
 
-
 table button {
   padding: 8px 12px;
   border-radius: 8px;
   border: 2px solid var(--secondary-color);
   background-color: var(--highlight-color);
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   overflow: hidden;
 }
 
-
 table button::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   margin: auto;
@@ -75,7 +71,7 @@ table button::before {
   scale: 0;
   z-index: -1;
   background-color: var(--secondary-color);
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 table button:hover::before {
