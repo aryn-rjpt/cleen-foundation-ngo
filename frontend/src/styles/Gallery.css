@@ -52,11 +52,11 @@
 }
 
 .filter-btn:hover {
-  background-color: var(--secondary-color);
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
   color: #fff;
-  border-color: var(--secondary-color);
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 18px rgba(4, 102, 200, 0.2);
+  border: none;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
 .gallery-grid {

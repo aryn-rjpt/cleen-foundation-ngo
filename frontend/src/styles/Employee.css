@@ -2,7 +2,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+<<<<<<< HEAD
     margin-top: 3rem;
+=======
+    margin: 60px 0; /* Added vertical spacing */
+>>>>>>> 9bc2bbb (Add navbar and footer)
 }
 
 .empdir-container form {
@@ -17,7 +21,6 @@
     border-radius: 9px;
 }
 
-
 .empdir-container form button {
     padding: 0.5rem 1rem;
     background-color: var(--highlight-color);
@@ -29,8 +32,6 @@
     transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
     overflow: hidden;
 }
-
-
 
 .empdir-container form button::before {
     content: '';
@@ -60,7 +61,7 @@
     scale: 1;
 }
 
-.empdir-container>div {
+.empdir-container > div {
     width: 75%;
     margin: 3rem;
 }

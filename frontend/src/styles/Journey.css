@@ -85,9 +85,15 @@
 }
 
 .join-btn:hover {
-  background-color: var(--secondary-color);
-  transform: scale(1.05) translateY(-2px);
-  color: var(--text-color);
+ background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: #fff !important;
+  border: none;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
 .journey-extra {

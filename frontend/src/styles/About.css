@@ -74,6 +74,13 @@
 .about-nav a.active::after {
   width: 100%;
 }
+.about-nav a:hover {
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  border: none;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
 
 hr {
   margin: 60px 0;

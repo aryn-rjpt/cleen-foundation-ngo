@@ -14,7 +14,8 @@ body {
   justify-content: center;
   align-items: center;
   padding: 40px 20px;
-  margin-bottom: -160px;
+  /* margin-bottom: -160px; */
+  margin: 1px 0;
 }
 
 .login-overlay {

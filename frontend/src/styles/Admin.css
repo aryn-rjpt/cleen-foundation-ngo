@@ -2,7 +2,11 @@
   padding: 20px 30px;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+<<<<<<< HEAD
   margin-top: 3rem;
+=======
+  margin: 100px 0;
+>>>>>>> 9bc2bbb (Add navbar and footer)
 }
 
 .admin-layout h1 {

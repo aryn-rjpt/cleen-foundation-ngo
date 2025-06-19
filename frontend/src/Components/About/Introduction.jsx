@@ -120,12 +120,12 @@ export default function Introduction() {
               We believe in the power of people. Here’s what our changemakers
               have to say:
             </p>
-            <blockquote>
+            < blockquote className="blockqut">
               “Volunteering here gave me a purpose. I now mentor girls from my
               village and help them stay in school.” <br />
               <span>- Ankita, Mentor</span>
             </blockquote>
-            <blockquote>
+            <blockquote className="blockqut">
               “Together we transformed a neighborhood through our cleanliness
               campaign. It felt like real change.” <br />
               <span>- Shivam, Volunteer Leader</span>
