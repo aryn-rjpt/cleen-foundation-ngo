@@ -1,8 +1,25 @@
+nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10rem;
+}
+
 nav ul {
     display: flex;
     justify-content: center;
     background-color: var(--primary-color);
     padding: 1rem;
+    position: fixed;
+    top: 0;
+    width: 80%;
+    margin: 2rem;
+    z-index: 1;
+    border-radius: 1rem;
+    border: 7px solid var(--primary-color);
+    align-items: center;
+    height: 5rem;
+    box-shadow: 0 0 0 2px white inset;
+    transition: top 0.5s ease;
 }
 
 nav ul li {
@@ -11,10 +28,11 @@ nav ul li {
 }
 
 nav img {
-    width: 5vw;
-    margin-top: -1.2rem;
+    width: 7rem;
+    margin-top: -0.2rem;
     background: white;
     border-radius: 50%;
+    border: 3px solid var(--secondary-color);
 }
 
 nav ul li a {
