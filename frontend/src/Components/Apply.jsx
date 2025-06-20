@@ -1,68 +1,68 @@
 
 import "../styles/Apply.css"
-
+import backgroundImg from "../assets/Teacher.png";
 const Apply = () => {
   return (
-    <div className="application-container">
-      <h1>Apply as a Teacher</h1>
-
-      <form action="">
-
-        <div className="application-row">
-
-          <div>
-
-            <label htmlFor="name">Full Name</label>
-            <input type="text" id="name" name="name" required />
-
-            <label htmlFor="mobile">Mobile Number</label>
-            <input type="number" id="mobile" name="mobile" />
-
-            <label htmlFor="parent">Father's/Mother's Name</label>
-            <input type="text" id="parent" name="parent" required />
-
-            <label htmlFor="email">Email ID</label>
-            <input type="email" id="email" name="email" required />
-
-            <label htmlFor="aadhar">Upload Aadhar</label>
-            <input type="file" id="aadhar" name="aadhar" required />
-
-            <label htmlFor="resume">Upload Resume</label>
-            <input type="file" id="resume" name="resume" required />
-
+    <div
+      style={{
+        position: "relative",
+        backgroundImage: `url(${backgroundImg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        minHeight: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: "2rem",
+      }}
+    >
+      {/* Overlay div */}
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: "rgba(255, 255, 255, 0.44)", // lighter overlay
+          zIndex: 1,
+        }}
+      />
+     <div className="teacher-form-container">
+        <h2>Apply as a Teacher</h2>
+        <form className="teacher-form">
+          <div className="form-group">
+            <input type="text" placeholder="Full Name" />
+            <input type="text" placeholder="Qualification" />
           </div>
-
-          <div>          
-
-            <label htmlFor="qualification">Qualification</label>
-            <input type="text" id="qualification" name="qualification" required />
-
-            <label htmlFor="experience">Teaching Experience</label>
-            <input type="text" id="experience" name="experience" required/>
-
-            <label htmlFor="village">Preferred Block/Village</label>
-            <input type="text" id="village" name="village" required />
-
-            <label htmlFor="aadhar">Aadhar Number</label>
-            <input type="number" id="aadhar" name="aadhar" required maxLength={16} minLength={16}/>
-
-            <label htmlFor="qualification-doc">Upload Qualification Document</label>
-            <input type="file" id="qualification-doc" name="qualification-doc" required />
-
-            <label htmlFor="photo">Passport Size Photo</label>
-            <input type="file" id="photo" name="photo" required />
-
+          <div className="form-group">
+            <input type="tel" placeholder="Mobile Number" />
+            <input type="text" placeholder="Teaching Experience" />
           </div>
-        
-        </div>
-       
-
-        <button type="submit">Submit</button>
-
-
-      </form>
-
-
+          <div className="form-group">
+            <input type="text" placeholder="Father's/Mother's Name" />
+            <input type="text" placeholder="Preferred Block/Village" />
+          </div>
+          <div className="form-group">
+            <input type="email" placeholder="Email ID" />
+            <input type="text" placeholder="Aadhar Number" />
+          </div>
+          <div className="form-group file-group">
+            <label>Upload Aadhar</label>
+            <input type="file" />
+            <label>Upload Qualification Document</label>
+            <input type="file" />
+          </div>
+          <div className="form-group file-group">
+            <label>Upload Resume</label>
+            <input type="file" />
+            <label>Passport Size Photo</label>
+            <input type="file" />
+          </div>
+          <button type="submit" className="submit-btn">Submit</button>
+        </form>
+      </div>
     </div>
   )
 }
