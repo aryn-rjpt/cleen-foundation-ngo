@@ -1,115 +1,151 @@
-.application-container {
-    padding-top: 160px; /* ✅ Prevent overlap with fixed navbar */
-    margin-bottom: 4rem;
+/* Reset layout */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-family: var(--font-family);
 }
 
-.application-container h1 {
-    text-align: center;
-    color: var(--text-color);
+/* Background wrapper */
+.teacher-background {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.application-container form {
-    margin: 2rem 6rem;
-    display: flex;
-    flex-direction: column;
+/* Semi-transparent white overlay */
+.teacher-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 1;
 }
 
-.application-row {
-    display: flex;
-    gap: 2rem;
+/* Form container */
+.teacher-form-container {
+  width: 90%;
+  max-width: 900px;
+  background-color: rgba(255, 255, 255, 0.769);
+  padding: 2rem 3rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px var(--shadow-color);
+  z-index: 2;
+  margin-top: 100px;
 }
 
-.application-row div {
+/* Form heading */
+.teacher-form-container h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Form structure */
+.teacher-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Input group */
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+/* Text and file inputs */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="file"] {
+  flex: 1 1 48%;
+  padding: 0.75rem;
+  border: 1.5px solid var(--primary-color);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  background-color: var(--white);
+  color: var(--text-color);
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+input:focus {
+  border-color: var(--shivam-primary-color);
+  box-shadow: 0 0 5px var(--shivam-primary-color);
+}
+
+/* Labels for file inputs */
+.file-group {
+  flex-direction: column;
+}
+
+.file-group label {
+  margin: 0.25rem 0 0.5rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+/* Submit button */
+.submit-btn {
+  padding: 0.75rem 2rem;
+  background-color: var(--shivam-primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .form-group input {
+    flex: 1 1 100%;
+  }
+
+  .teacher-form-container {
+    padding: 1.5rem;
+  }
+
+  .submit-btn {
     width: 100%;
+  }
+
+  .teacher-form-container h2 {
+    font-size: 1.6rem;
+  }
 }
 
-.application-container form input {
-    border: 2px solid var(--primary-color);
-    border-radius: 17px;
-    height: 3rem;
-    display: block;
-    width: 100%;
-    font-size: large;
+@media (max-width: 480px) {
+  .teacher-form-container {
     padding: 1rem;
-    color: #000000c7;
-    background-color: transparent;
-}
+  }
 
-.application-container form input:focus-visible {
-    border-color: var(--primary-color);
-    outline: none;
-}
+  .teacher-form-container h2 {
+    font-size: 1.4rem;
+  }
 
-.application-container form label {
-    color: #565656;
-    font-size: larger;
-    padding-left: .2rem;
-    display: block;
-    width: 100%;
-    margin: 1rem 0rem .5rem 0rem;
-}
-
-.application-container form input[type="file"] {
-    padding: 0.7rem 1.5rem;
-    font-size: medium;
-    color: gray;
-}
-
-.application-container form input::file-selector-button {
-    background-color: white;
-    border: none;
-    color: rgb(73, 73, 73);
-}
-
-.application-container button {
-    width: 8rem;
-    margin: 3rem auto;
-    padding: 10px 24px;
-    font-size: 18px;
-    border: 2px solid var(--secondary-color);
-    border-radius: 34px;
-    background-color: var(--highlight-color);
-    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
-    overflow: hidden;
-    position: relative;
-}
-
-.application-container button::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    margin: auto;
-    width: 50px;
-    height: 50px;
-    border-radius: inherit;
-    scale: 0;
-    z-index: -1;
-    background-color: var(--secondary-color);
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
-}
-
-.application-container button:hover::before {
-    scale: 3;
-}
-
-.application-container button:hover {
-    scale: 1.1;
-    color: white;
-    box-shadow: 0px 0px 13px 10px rgba(190, 240, 188, 0.4);
-}
-
-.application-container button:active {
-    scale: 1;
-}
-
-/* ✅ Responsive Styles */
-@media screen and (max-width: 768px) {
-    .application-container form {
-        margin: 2rem 1rem;
-    }
-
-    .application-row {
-        flex-direction: column;
-        gap: unset;
-    }
+  .submit-btn {
+    padding: 0.75rem;
+  }
 }
