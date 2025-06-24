@@ -13,7 +13,7 @@ import Login from './components/Login.jsx';
 import Register from './components/Register.jsx';
 
 // Pages
-import Home from './components/Home.jsx';
+import Home from './Components/Home.jsx';
 import Apply from './components/Apply.jsx';
 import Blog from './components/Blog.jsx';
 import Chatbot from './components/Chatbot.jsx';
