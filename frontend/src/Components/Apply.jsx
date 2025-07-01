@@ -1,7 +1,22 @@
 
 import "../styles/Apply.css"
 import backgroundImg from "../assets/Teacher.png";
+import axios from "axios";
+
+import API_URL from "../assets/API_URL"
+
 const Apply = () => {
+
+  async function handleSubmit(event){
+    event.preventDefault();
+
+    const res = await axios.get(`${API_URL}/api/apply`)
+
+    console.log(res);
+
+    alert("Form submitted successfully!");
+  }
+
   return (
     <div
       style={{
@@ -31,7 +46,7 @@ const Apply = () => {
       />
      <div className="teacher-form-container">
         <h2>Apply as a Teacher</h2>
-        <form className="teacher-form">
+        <form className="teacher-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <input type="text" placeholder="Full Name" />
             <input type="text" placeholder="Qualification" />
