@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 import '../styles/Donation.css'
@@ -7,6 +7,22 @@ import donationImage from "../assets/donation.png"
 
 
 const Donation = () => {
+
+  const [donationData, setDonationData] = useState({
+    name: '',
+    email: '',
+    amount : '',
+    paymentMethod: ''
+  })
+  const donationInputHandle = (e) => {
+    setDonationData({ ...donationData, [e.target.name]: e.target.value })
+    
+  }
+  const donationFormSubmit = (e) => {
+    e.preventDefault();
+    console.log(donationData)
+  }
+
   return (
     <div className="donation-page" style={{ backgroundImage: `url(${donationImage})` }}>
     <div className="donation-overlay" />
@@ -19,22 +35,22 @@ const Donation = () => {
     <div className="donation-box">
       {/* Left side - Form */}
       <div className="form-side">
-        <form className="donation-form">
+        <form className="donation-form" onSubmit={donationFormSubmit}>
           <label>Name</label>
-          <input type="text" placeholder="Your full name" required />
+          <input name='name' onChange={donationInputHandle} type="text" placeholder="Your full name" required />
 
           <label>Email</label>
-          <input type="email" placeholder="you@example.com" required />
+          <input type="email" placeholder="you@example.com" onChange={donationInputHandle} name='email' required />
 
           <label>Amount (INR)</label>
-          <input type="number" placeholder="500" required />
+          <input type="number" placeholder="500" required onChange={donationInputHandle} name='amount' />
 
           <label>Payment Method</label>
-          <select required>
-            <option value="">Select</option>
-            <option value="razorpay">Razorpay</option>
-            <option value="upi">UPI</option>
-            <option value="paypal">PayPal</option>
+          <select onChange={donationInputHandle} name='paymentMethod' required>
+            <option  value="">Select</option>
+            <option  value="razorpay">Razorpay</option>
+            <option  value="paypal">PayPal</option>
+            <option  value="upi">UPI</option>
           </select>
 
           <button type="submit">Donate Now</button>
