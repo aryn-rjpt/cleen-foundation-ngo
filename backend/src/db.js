@@ -1,23 +1,8 @@
-import { getFirestore, collection, doc, getDoc, setDoc, updateDoc } from 'firebase/firestore';
+import { getFirestore, collection, doc, getDoc, setDoc, updateDoc, getDocs } from 'firebase/firestore';
 
 import app from './firebaseConfig.js';
 
 const db = getFirestore(app);
-
-// export async function updateProfile(uid, userData) {
-
-//     console.log("Uid:", uid, "Data:", userData);
-
-//     try {
-//         const docRef = await addDoc(collection(db, 'users'), {
-//             uid: uid,
-//             ...userData
-//         })
-//         console.log("Document written with ID: ", docRef.id, uid, userData);
-//     } catch (e) {
-//         console.error("Error adding document: ", e);
-//     }
-// }
 
 export async function setProfile(email, userData) {
 
@@ -66,5 +51,27 @@ export async function getUserData(email) {
     } else {
         return null;
     }
+
+}
+
+export async function getAllUsers() {
+
+    const querySnapshot = await getDocs(collection(db, "users"));
+
+    const users = {}
+
+    querySnapshot.forEach((doc) => {
+        users[doc.id] = doc.data();
+    });
+
+    return users;
+
+}
+
+export async function newsSubscribe(email){
+
+    const docRef = doc(db, "newsletter", email);
+
+    await setDoc(docRef, {})
 
 }

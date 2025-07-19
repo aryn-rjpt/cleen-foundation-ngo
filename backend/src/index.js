@@ -4,7 +4,7 @@ import express from 'express';
 import cors from 'cors';
 
 import { signup, signin } from './auth.js';
-import { setProfile, updateProfile, getUserData } from './db.js';
+import { setProfile, updateProfile, getUserData, getAllUsers, newsSubscribe } from './db.js';
 
 
 const app = express()
@@ -99,6 +99,15 @@ app.get('/api/getUser', async (req, res) => {
 
 })
 
+app.get('/api/getAllUsers', async (req, res) => {
+    const users = await getAllUsers();
+    return res.status(200).json(users);
+})
+
+app.get('/api/subscribe', (req, res) => {
+    newsSubscribe(req.query.email);
+    res.sendStatus(200);
+})
 
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`)
