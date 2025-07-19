@@ -43,13 +43,13 @@
   backdrop-filter: blur(4px);
 }
 
-.about-nav a:hover {
+/* .about-nav a:hover {
   background-color: var(--secondary-color);
   color: #fff;
   border-color: var(--secondary-color);
   transform: translateY(-2px) scale(1.02);
   box-shadow: 0 8px 18px rgba(4, 102, 200, 0.2);
-}
+} */
 
 .about-nav a.active {
   background-color: var(--shivam-primary-color);

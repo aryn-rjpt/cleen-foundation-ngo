@@ -5,10 +5,13 @@ import { TiSocialFacebook, TiSocialYoutube } from "react-icons/ti";
 import { RiTwitterXLine } from "react-icons/ri";
 
 const Footer = () => {
+  const year = new Date().getFullYear();
+
   return (
     <footer className="footer">
+      {/* Top Grid */}
       <div className="footer-grid">
-        {/* About Section */}
+        {/* About */}
         <div className="footer-column">
           <h3>About Us</h3>
           <ul>
@@ -58,14 +61,16 @@ const Footer = () => {
 
         {/* Newsletter */}
         <div className="footer-column newsletter">
-          <h3>Subscribe to our newsletter</h3>
-          <p>
-            Stay updated on our projects, events, and stories of change from
-            communities we serve.
-          </p>
-          <form>
-            <input type="email" placeholder="Your email address" />
-            <button type="submit">Subscribe</button>
+          <h3>Subscribe</h3>
+          <p>Join our newsletter to stay updated with our latest initiatives and stories of change.</p>
+          <form className="newsletter-form">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              aria-label="Email address for newsletter subscription"
+              required
+            />
+            <button type="submit" className="btn-primary">Subscribe</button>
           </form>
         </div>
       </div>
@@ -73,10 +78,18 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="footer-bottom">
         <div className="footer-socials">
-          <a href="#"><RiTwitterXLine /></a>
-          <a href="#"><TiSocialFacebook /></a>
-          <a href="#"><FaInstagram /></a>
-          <a href="#"><TiSocialYoutube /></a>
+          <a href="#" aria-label="Twitter">
+            <RiTwitterXLine />
+          </a>
+          <a href="#" aria-label="Facebook">
+            <TiSocialFacebook />
+          </a>
+          <a href="#" aria-label="Instagram">
+            <FaInstagram />
+          </a>
+          <a href="#" aria-label="YouTube">
+            <TiSocialYoutube />
+          </a>
         </div>
 
         <div className="footer-links">
@@ -84,10 +97,12 @@ const Footer = () => {
           <span>|</span>
           <NavLink to="/privacy">Privacy</NavLink>
           <span>|</span>
-          <NavLink to="/cookies">Cookie Policy</NavLink>
+          <NavLink to="/cookies">Cookies</NavLink>
         </div>
 
-        <div className="footer-copy">© {new Date().getFullYear()} Cleen Foundation</div>
+        <div className="footer-copy">
+          © {year} Cleen Foundation. All rights reserved.
+        </div>
       </div>
     </footer>
   );

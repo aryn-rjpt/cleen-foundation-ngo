@@ -1,29 +1,38 @@
-import React, { useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useEffect, useState, useRef } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 
 import '../styles/Navbar.css';
-import Logo from '../assets/Logo.png'; 
+import Logo from '../assets/Logo.png';
 
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true);
-  let prevY = window.scrollY;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const prevY = useRef(window.scrollY);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       const currentY = window.scrollY;
-
-      if (currentY < prevY) {
-        setShowNavbar(true); // Scrolling up
+      if (currentY < prevY.current) {
+        setShowNavbar(true);
       } else {
-        setShowNavbar(false); // Scrolling down
+        setShowNavbar(false);
       }
-
-      prevY = currentY;
+      prevY.current = currentY;
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    // Close mobile menu on route change for a clean experience
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(prev => !prev);
+  };
 
   return (
     <header className={`navbar-header ${showNavbar ? 'show' : 'hide'}`}>
@@ -34,16 +43,40 @@ const Navbar = () => {
           </NavLink>
         </div>
 
-        <ul className="navbar-links">
-          <li><NavLink to="/cleen-foundation-ngo" end>Home</NavLink></li>
-          <li><NavLink to="/cleen-foundation-ngo/employee">Employee</NavLink></li>
-          <li className="cta"><NavLink to="/cleen-foundation-ngo/donation">+Donation</NavLink></li>
-          <li><NavLink to="/cleen-foundation-ngo/blog">Blog</NavLink></li>
-          <li><NavLink to="/cleen-foundation-ngo/about">About</NavLink></li>
-          <li><NavLink to="/cleen-foundation-ngo/contact">Contact</NavLink></li>
-          <li><NavLink to="/cleen-foundation-ngo/apply">Apply</NavLink></li>
-          <li><NavLink to="/cleen-foundation-ngo/admin">Admin</NavLink></li>
-          <li><NavLink to="/cleen-foundation-ngo/login">Login</NavLink></li>
+        {/* Hamburger Icon */}
+        <button
+          className={`navbar-toggle ${isMobileMenuOpen ? 'open' : ''}`}
+          onClick={toggleMobileMenu}
+          aria-label="Toggle navigation menu"
+          aria-expanded={isMobileMenuOpen}
+        >
+          <span className="hamburger"></span>
+        </button>
+
+        <ul className={`navbar-links ${isMobileMenuOpen ? 'active' : ''}`}>
+          {[
+            { path: '/', label: 'Home' },
+            { path: '/employee', label: 'Employee' },
+            { path: '/donation', label: '+Donation', cta: true },
+            { path: '/blog', label: 'Blog' },
+            { path: '/about', label: 'About' },
+            { path: '/contact', label: 'Contact' },
+            { path: '/apply', label: 'Apply' },
+            { path: '/admin', label: 'Admin' },
+            { path: '/login', label: 'Login' },
+          ].map((link, index) => (
+            <li key={index} className={link.cta ? 'cta' : ''}>
+              <NavLink
+                to={`/cleen-foundation-ngo${link.path}`}
+                end={link.path === '/'}
+                className={({ isActive }) =>
+                  `${isActive ? 'active' : ''} ${link.cta ? 'cta-link' : ''}`
+                }
+              >
+                {link.label}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
