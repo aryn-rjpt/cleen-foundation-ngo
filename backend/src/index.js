@@ -4,7 +4,7 @@ import express from 'express';
 import cors from 'cors';
 
 import { signup, signin } from './auth.js';
-import { setProfile, updateProfile, getUserData, getAllUsers, newsSubscribe } from './db.js';
+import { setProfile, updateProfile, getUserData, getAllUsers, newsSubscribe, contactUs } from './db.js';
 
 
 const app = express()
@@ -18,6 +18,7 @@ app.get('/', (req, res) => {
     res.send('Welcome to the Clean Foundation NGO API!')
 })
 
+// API to signup a new user
 app.post('/api/signup', async (req, res) => {
 
     console.log(req.body);
@@ -46,6 +47,8 @@ app.post('/api/signup', async (req, res) => {
     }
 })
 
+
+// API to sign in an existing user
 app.post('/api/signin', async (req, res) => {
 
     const { email, password } = req.body;
@@ -61,6 +64,8 @@ app.post('/api/signin', async (req, res) => {
 
 })
 
+
+// API to update user profile
 app.post('/api/update', async (req, res) => {
 
     const { email, ...data } = req.body;
@@ -79,6 +84,8 @@ app.post('/api/update', async (req, res) => {
 
 })
 
+
+// API to get user data by email
 app.get('/api/getUser', async (req, res) => {
 
     const { email } = req.query;
@@ -99,13 +106,24 @@ app.get('/api/getUser', async (req, res) => {
 
 })
 
+
+// API to get all users
 app.get('/api/getAllUsers', async (req, res) => {
     const users = await getAllUsers();
     return res.status(200).json(users);
 })
 
+
+// API to subscribe to newsletter
 app.get('/api/subscribe', (req, res) => {
     newsSubscribe(req.query.email);
+    res.sendStatus(200);
+})
+
+
+// API to for "contact us" section
+app.post('/api/contact', (req, res) => {
+    contactUs(req.body);
     res.sendStatus(200);
 })
 

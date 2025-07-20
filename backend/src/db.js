@@ -75,3 +75,13 @@ export async function newsSubscribe(email){
     await setDoc(docRef, {})
 
 }
+
+export async function contactUs(data) {
+    const docRef = doc(db, "contact", data.email);
+
+    await setDoc(docRef, {
+        ...data
+    }, { merge: true });
+
+    console.log("Contact request received from:", data.email);
+}
