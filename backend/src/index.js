@@ -4,7 +4,7 @@ import express from 'express';
 import cors from 'cors';
 
 import { signup, signin } from './auth.js';
-import { setProfile, updateProfile, getUserData, getAllUsers, newsSubscribe, contactUs } from './db.js';
+import { setProfile, updateProfile, getUserData, getAllUsers, newsSubscribe, contactUs, getStudentCourseData, subscribeToCourse } from './db.js';
 
 
 const app = express()
@@ -127,8 +127,26 @@ app.post('/api/contact', (req, res) => {
     res.sendStatus(200);
 })
 
+// API to get student data by email
+app.get('/api/getStudent', async (req, res) => {
+
+    const { email } = req.query;
+    let data = await getStudentCourseData(email);
+    return res.status(200).json(data);
+
+});
+
+// API to subscribe to a course
+app.get('/api/subscribeToCourse', (req, res) => {
+    
+    const { email, courseId } = req.query;
+    subscribeToCourse(email, courseId);
+    res.sendStatus(200);
+});
+
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`)
 })
+
 
 

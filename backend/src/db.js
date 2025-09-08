@@ -68,7 +68,7 @@ export async function getAllUsers() {
 
 }
 
-export async function newsSubscribe(email){
+export async function newsSubscribe(email) {
 
     const docRef = doc(db, "newsletter", email);
 
@@ -84,4 +84,49 @@ export async function contactUs(data) {
     }, { merge: true });
 
     console.log("Contact request received from:", data.email);
+}
+
+export async function subscribeToCourse(email, courseId) {
+
+    let studentCourses;
+
+    try {
+        let data = await getStudentCourseData(email);
+        studentCourses = data.courses;
+    }
+    catch (error) {
+        // No existing courses        
+        studentCourses = []
+    }
+
+    let exists = studentCourses.some(course => course.courseId === courseId);
+
+    if (!exists) {
+
+        const docRef = doc(db, 'studentsToCourse', email);
+
+        await setDoc(docRef, {
+            courses: [
+                ...studentCourses,
+                {
+                    courseId: courseId,
+                    progress: 0
+                }
+            ],
+        });
+    }
+
+}
+
+export async function getStudentCourseData(email) {
+
+    const ref = doc(db, 'studentsToCourse', email);
+    const docSnap = await getDoc(ref);
+
+    if (docSnap.exists()) {
+        return docSnap.data();
+    } else {
+        return null;
+    }
+
 }
