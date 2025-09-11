@@ -99,9 +99,9 @@ export async function subscribeToCourse(email, courseId) {
         studentCourses = []
     }
 
-    let exists = studentCourses.some(course => course.courseId === courseId);
+    let courseExists = studentCourses.some(course => course.courseId === courseId);
 
-    if (!exists) {
+    if (!courseExists) {
 
         const docRef = doc(db, 'studentsToCourse', email);
 
@@ -118,7 +118,7 @@ export async function subscribeToCourse(email, courseId) {
 
 }
 
-export async function getStudentCourseData(email) {
+export async function getStudentCourseData(email) {    
 
     const ref = doc(db, 'studentsToCourse', email);
     const docSnap = await getDoc(ref);
@@ -128,5 +128,59 @@ export async function getStudentCourseData(email) {
     } else {
         return null;
     }
+
+}
+
+export async function getTeacherCourseData(email) {
+
+    const ref = doc(db, 'teachersToCourse', email);
+    const docSnap = await getDoc(ref);
+
+    if (docSnap.exists()) {
+        return docSnap.data();
+    } else {
+        return null;
+    }
+
+}
+
+
+export async function addCourse(email, courseName, playlistYT) {
+
+    let teacherCourses, courseId = 1;
+
+    let globalVarDoc = doc(db, 'global', 'courseCounter');
+
+    const globalVarSnap = await getDoc(globalVarDoc);
+
+    if ( !globalVarSnap.exists() ) {
+        await setDoc(globalVarDoc, { count: 1 });
+    }
+    else {
+        courseId = globalVarSnap.data().count + 1;
+        await updateDoc(globalVarDoc, { count: courseId });
+    }
+
+    try {
+        let data = await getTeacherCourseData(email);
+        teacherCourses = data.courses;
+    }
+    catch (error) {
+        // No existing courses taught  
+        teacherCourses = []
+    }    
+
+    const docRef = doc(db, 'teachersToCourse', email);
+
+    await setDoc(docRef, {
+        courses: [
+            ...teacherCourses,
+            {
+                courseId: courseId,
+                courseName: courseName,
+                playlistYT: playlistYT
+            }
+        ],
+    });
 
 }
