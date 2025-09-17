@@ -56,7 +56,7 @@ const Navbar = () => {
         <ul className={`navbar-links ${isMobileMenuOpen ? 'active' : ''}`}>
           {[
             { path: '/', label: 'Home' },
-            { path: '/employee', label: 'Employee' },
+            { path: '/courses', label: 'All Courses' },
             { path: '/donation', label: '+Donation', cta: true },
             { path: '/blog', label: 'Blog' },
             { path: '/about', label: 'About' },

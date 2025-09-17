@@ -90,8 +90,10 @@
 /* ========== HERO BUTTONS ========== */
 .hero-buttons {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content:center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
   gap: 1rem;
 }
 

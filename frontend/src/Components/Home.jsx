@@ -182,10 +182,10 @@ const Home = () => {
           <h1>Your Impact Matter</h1>
           <p>Empowering Lives Through Education and Action</p>
           <div className="hero-buttons">
-            <NavLink className="btn-primary" to="/donation">
+            <NavLink className="btn-primary" to="/cleen-foundation-ngo/donation">
               +Donate Now
             </NavLink>
-            <NavLink className="btn-secondary" to="/apply">
+            <NavLink className="btn-secondary" to="/cleen-foundation-ngo/login">
               Volunteer
             </NavLink>
           </div>

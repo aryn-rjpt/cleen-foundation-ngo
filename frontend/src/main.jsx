@@ -14,12 +14,12 @@ import Register from './components/Register.jsx';
 
 // Pages
 import Home from './Components/Home.jsx';
-import Apply from './components/Apply.jsx';
-import Blog from './components/Blog.jsx';
-import Chatbot from './components/Chatbot.jsx';
-import Contact from './components/Contact.jsx';
-import Donation from './components/Donation.jsx';
-import Employee from './components/Employee.jsx';
+import Apply from './Components/Apply.jsx';
+import Blog from './Components/Blog.jsx';
+import Chatbot from './Components/Chatbot.jsx';
+import Contact from './Components/Contact.jsx';
+import Donation from './Components/Donation.jsx';
+import Courses from './Components/Courses.jsx';
 
 // Admin Dashboard
 import Admin, {
@@ -73,7 +73,7 @@ const router = createBrowserRouter([
       { path: 'chatbot', element: <Chatbot /> },
       { path: 'contact', element: <Contact /> },
       { path: 'donation', element: <Donation /> },
-      { path: 'employee', element: <Employee /> },
+      { path: 'courses', element: <Courses /> },
       { path: 'login', element: <Login /> },
       { path: 'register', element: <Register /> }
     ]

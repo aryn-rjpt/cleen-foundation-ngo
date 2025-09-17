@@ -7,18 +7,18 @@
   
 }
 
-:root {
-  --text-color: #023047;
-  --primary-color: #03347b;
-  --shivam-primary-color: #0466c8;
-  --secondary-color: #fcbf49;
-  --background-color: #f0f8ff;
-  --highlight-color: #e3f2fd;
-  --shadow-color: rgba(4, 102, 200, 0.12);
-  --white: #ffffff;
-  --radius: 12px;
-  --font-family: "Poppins", sans-serif;
-}
+  :root {
+    --text-color: #023047;
+    --primary-color: #03347b;
+    --shivam-primary-color: #0466c8;
+    --secondary-color: #fcbf49;
+    --background-color: #f0f8ff;
+    --highlight-color: #e3f2fd;
+    --shadow-color: rgba(4, 102, 200, 0.12);
+    --white: #ffffff;
+    --radius: 12px;
+    --font-family: "Poppins", sans-serif;
+  }
 
 body {
   font-family: "Poppins", sans-serif;
